@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zsaltedfish.javacpp</groupId>
+    <artifactId>aria2</artifactId>
+    <version>1.0</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <javacpp.cppbuild.skip>false
+        </javacpp.cppbuild.skip> <!-- To skip execution of cppbuild.sh: -Djavacpp.cppbuild.skip=true -->
+        <javacpp.parser.skip>false
+        </javacpp.parser.skip>     <!-- To skip header file parsing phase: -Djavacpp.parser.skip=true  -->
+        <javacpp.compiler.skip>false
+        </javacpp.compiler.skip> <!-- To skip native compilation phase: -Djavacpp.compiler.skip=true -->
+
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacpp</artifactId>
+            <version>1.5.7</version>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.bytedeco</groupId>-->
+        <!--            <artifactId>javacpp</artifactId>-->
+        <!--            <version>1.5.7</version>-->
+        <!--            <classifier>windows-x86_64</classifier>-->
+        <!--        </dependency>-->
+    </dependencies>
+    <build>
+        <plugins>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>linux-x86_64</id>
+                        <!-- 绑定到package生命周期阶段上 -->
+                        <phase>package</phase>
+                        <goals>
+                            <!-- 绑定到package生命周期阶段上 -->
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors> <!--描述文件路径-->
+                                <descriptor>${project.baseUri}/assembly/linux-x86_64.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>windows-x86_64</id>
+                        <!-- 绑定到package生命周期阶段上 -->
+                        <phase>package</phase>
+                        <goals>
+                            <!-- 绑定到package生命周期阶段上 -->
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors> <!--描述文件路径-->
+                                <descriptor>${project.baseUri}/assembly/windows-x86_64.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.bytedeco</groupId>
+                <artifactId>javacpp</artifactId>
+                <version>1.5.7</version>
+                <configuration>
+                    <properties>windows-x86_64</properties>
+                    <propertyKeysAndValues>
+                        <!--                        <property>-->
+                        <!--                            <name>platform.root</name>-->
+                        <!--                            <value>windows-x86_64</value>-->
+                        <!--                        </property>-->
+                        <!--                        <property>-->
+                        <!--                            <name>platform.compiler</name>-->
+                        <!--                            <value>g++</value>-->
+                        <!--                        </property>-->
+                    </propertyKeysAndValues>
+                    <includePaths>
+                        <includePath>${basedir}/cpp/include/</includePath>
+                    </includePaths>
+                    <linkPaths>
+<!--                        <linkPath>${project.basedir}/cpp/lib</linkPath>-->
+<!--                        <linkPath>${project.basedir}/cpp/bin</linkPath>-->
+                    </linkPaths>
+<!--                    <preloadPath>${project.basedir}/cpp/bin</preloadPath>-->
+                    <encoding>utf-8</encoding>
+                    <classPath>${project.build.outputDirectory}</classPath>
+                    <compile>false</compile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>javacpp.parser</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${javacpp.parser.skip}</skip>
+                            <outputDirectory>${project.build.sourceDirectory}</outputDirectory>
+                            <classOrPackageName>com.zsaltedfish.aria2.prest.*</classOrPackageName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>javacpp.compiler</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                        <configuration>
+                            <skip>${javacpp.compiler.skip}</skip>
+                            <classOrPackageName>com.zsaltedfish.aria2.**</classOrPackageName>
+                            <outputDirectory>
+                                ${project.basedir}/cpp
+                            </outputDirectory>
+                            <copyLibs>false</copyLibs>
+                        </configuration>
+
+                    </execution>
+                </executions>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
+    <profiles>
+    </profiles>
+</project>
