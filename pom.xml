@@ -4,13 +4,36 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zsaltedfish.javacpp</groupId>
-    <artifactId>aria2</artifactId>
-    <version>1.0</version>
+    <groupId>io.github.ssaltedfish</groupId>
+    <artifactId>aria2-javacpp</artifactId>
+    <version>0.1</version>
+    <packaging>jar</packaging>
+
+    <name>aria2-javacpp</name>
+    <description>java call  c++ libaria2</description>
+    <url>https://github.com/ssaltedfish/aria2-javacpp</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>saltedfish</name>
+            <email>1976648487@qq.com</email>
+            <url>https://github.com/ssaltedfish/aria2-javacpp</url>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/ssaltedfish/aria2-javacpp.git</connection>
+        <developerConnection>scm:git:git@github.com:ssaltedfish/aria2-javacpp.git</developerConnection>
+        <url>https://github.com/ssaltedfish/aria2-javacpp</url>
+    </scm>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <javacpp.cppbuild.skip>false
@@ -19,24 +42,29 @@
         </javacpp.parser.skip>     <!-- To skip header file parsing phase: -Djavacpp.parser.skip=true  -->
         <javacpp.compiler.skip>false
         </javacpp.compiler.skip> <!-- To skip native compilation phase: -Djavacpp.compiler.skip=true -->
-
     </properties>
+
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>oss</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>oss</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.bytedeco</groupId>
             <artifactId>javacpp</artifactId>
             <version>1.5.7</version>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.bytedeco</groupId>-->
-        <!--            <artifactId>javacpp</artifactId>-->
-        <!--            <version>1.5.7</version>-->
-        <!--            <classifier>windows-x86_64</classifier>-->
-        <!--        </dependency>-->
     </dependencies>
     <build>
         <plugins>
-
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
@@ -78,23 +106,12 @@
                 <configuration>
                     <properties>windows-x86_64</properties>
                     <propertyKeysAndValues>
-                        <!--                        <property>-->
-                        <!--                            <name>platform.root</name>-->
-                        <!--                            <value>windows-x86_64</value>-->
-                        <!--                        </property>-->
-                        <!--                        <property>-->
-                        <!--                            <name>platform.compiler</name>-->
-                        <!--                            <value>g++</value>-->
-                        <!--                        </property>-->
                     </propertyKeysAndValues>
                     <includePaths>
                         <includePath>${basedir}/cpp/include/</includePath>
                     </includePaths>
                     <linkPaths>
-<!--                        <linkPath>${project.basedir}/cpp/lib</linkPath>-->
-<!--                        <linkPath>${project.basedir}/cpp/bin</linkPath>-->
                     </linkPaths>
-<!--                    <preloadPath>${project.basedir}/cpp/bin</preloadPath>-->
                     <encoding>utf-8</encoding>
                     <classPath>${project.build.outputDirectory}</classPath>
                     <compile>false</compile>
@@ -109,7 +126,7 @@
                         <configuration>
                             <skip>${javacpp.parser.skip}</skip>
                             <outputDirectory>${project.build.sourceDirectory}</outputDirectory>
-                            <classOrPackageName>com.zsaltedfish.aria2.prest.*</classOrPackageName>
+                            <classOrPackageName>io.github.ssaltedfish.aria2.prest.*</classOrPackageName>
                         </configuration>
                     </execution>
                     <execution>
@@ -120,7 +137,7 @@
                         </goals>
                         <configuration>
                             <skip>${javacpp.compiler.skip}</skip>
-                            <classOrPackageName>com.zsaltedfish.aria2.**</classOrPackageName>
+                            <classOrPackageName>io.github.ssaltedfish.aria2.**</classOrPackageName>
                             <outputDirectory>
                                 ${project.basedir}/cpp
                             </outputDirectory>
@@ -132,9 +149,56 @@
 
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <additionalparam>-Xdoclint:none</additionalparam>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--  必须配置GPG插件用于使用以下配置对组件进行签名 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+            </plugin>
+            <!--Nexus Staging Maven插件是将组件部署到OSSRH并将其发布到Central Repository的推荐方法-->
+
         </plugins>
 
     </build>
-    <profiles>
-    </profiles>
+
 </project>

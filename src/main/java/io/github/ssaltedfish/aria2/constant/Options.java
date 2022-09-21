@@ -1,4 +1,4 @@
-package com.zsaltedfish.aria2.constant;
+package io.github.ssaltedfish.aria2.constant;
 
 public class Options {
  /**

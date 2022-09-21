@@ -10,7 +10,7 @@
     <fileSets>
         <fileSet>
             <directory>${project.basedir}\cpp\windows-x86_64</directory>
-            <outputDirectory>\com\zsaltedfish\aria2\windows-x86_64</outputDirectory>
+            <outputDirectory>io\github\ssaltedfish\aria2\windows-x86_64</outputDirectory>
         </fileSet>
     </fileSets>
 

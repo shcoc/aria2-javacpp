@@ -13,7 +13,7 @@
             <excludes>
                 <exclude>${project.basedir}\cpp\include</exclude>
             </excludes>
-            <outputDirectory>\com\zsaltedfish\aria2\</outputDirectory>
+            <outputDirectory>io\github\ssaltedfish\aria2\</outputDirectory>
         </fileSet>
         <fileSet>
             <directory>${project.build.outputDirectory}</directory>

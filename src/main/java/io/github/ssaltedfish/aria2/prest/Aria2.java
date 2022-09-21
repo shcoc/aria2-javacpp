@@ -1,4 +1,4 @@
-package com.zsaltedfish.aria2.prest;
+package io.github.ssaltedfish.aria2.prest;
 
 
 import org.bytedeco.javacpp.Loader;
@@ -37,8 +37,8 @@ import org.bytedeco.javacpp.tools.InfoMapper;
                                 "libaria2-0"
                         })
         },
-        global = "com.zsaltedfish.aria2.global.Aria2",
-        target = "com.zsaltedfish.aria2.cpp"
+        global = "io.github.ssaltedfish.aria2.global.Aria2",
+        target = "io.github.ssaltedfish.aria2.cpp"
 
 )
 @Namespace("aria2")

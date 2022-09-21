@@ -111,29 +111,29 @@ static const char* JavaCPP_classNames[32] = {
         "java/nio/charset/Charset",
         "java/lang/NullPointerException",
         "java/lang/RuntimeException",
-        "com/zsaltedfish/aria2/cpp/A2GidVector$Iterator",
-        "com/zsaltedfish/aria2/cpp/A2GidVector",
+        "io/github/ssaltedfish/aria2/cpp/A2GidVector$Iterator",
+        "io/github/ssaltedfish/aria2/cpp/A2GidVector",
         "org/bytedeco/javacpp/BytePointer",
-        "com/zsaltedfish/aria2/cpp/BtMetaInfoData",
-        "com/zsaltedfish/aria2/cpp/StringVectorVector",
-        "com/zsaltedfish/aria2/cpp/Session",
-        "com/zsaltedfish/aria2/global/Aria2$DownloadEvent",
-        "com/zsaltedfish/aria2/cpp/DownloadEventCallback",
-        "com/zsaltedfish/aria2/cpp/FileData",
-        "com/zsaltedfish/aria2/cpp/StringStingPairVector",
+        "io/github/ssaltedfish/aria2/cpp/BtMetaInfoData",
+        "io/github/ssaltedfish/aria2/cpp/StringVectorVector",
+        "io/github/ssaltedfish/aria2/cpp/Session",
+        "io/github/ssaltedfish/aria2/global/Aria2$DownloadEvent",
+        "io/github/ssaltedfish/aria2/cpp/DownloadEventCallback",
+        "io/github/ssaltedfish/aria2/cpp/FileData",
+        "io/github/ssaltedfish/aria2/cpp/StringStingPairVector",
         "org/bytedeco/javacpp/LongPointer",
-        "com/zsaltedfish/aria2/cpp/UriData",
-        "com/zsaltedfish/aria2/cpp/FileDataVector$Iterator",
-        "com/zsaltedfish/aria2/cpp/FileDataVector",
-        "com/zsaltedfish/aria2/cpp/GlobalStat",
-        "com/zsaltedfish/aria2/cpp/SessionConfig",
-        "com/zsaltedfish/aria2/cpp/StringStingPair",
-        "com/zsaltedfish/aria2/cpp/StringVector$Iterator",
-        "com/zsaltedfish/aria2/cpp/StringVector",
-        "com/zsaltedfish/aria2/cpp/StringVectorVector$Iterator",
-        "com/zsaltedfish/aria2/cpp/UriDataVector$Iterator",
-        "com/zsaltedfish/aria2/cpp/UriDataVector",
-        "com/zsaltedfish/aria2/cpp/DownloadHandle" };
+        "io/github/ssaltedfish/aria2/cpp/UriData",
+        "io/github/ssaltedfish/aria2/cpp/FileDataVector$Iterator",
+        "io/github/ssaltedfish/aria2/cpp/FileDataVector",
+        "io/github/ssaltedfish/aria2/cpp/GlobalStat",
+        "io/github/ssaltedfish/aria2/cpp/SessionConfig",
+        "io/github/ssaltedfish/aria2/cpp/StringStingPair",
+        "io/github/ssaltedfish/aria2/cpp/StringVector$Iterator",
+        "io/github/ssaltedfish/aria2/cpp/StringVector",
+        "io/github/ssaltedfish/aria2/cpp/StringVectorVector$Iterator",
+        "io/github/ssaltedfish/aria2/cpp/UriDataVector$Iterator",
+        "io/github/ssaltedfish/aria2/cpp/UriDataVector",
+        "io/github/ssaltedfish/aria2/cpp/DownloadHandle" };
 static jclass JavaCPP_classes[32] = { NULL };
 static jfieldID JavaCPP_addressFID = NULL;
 static jfieldID JavaCPP_positionFID = NULL;
@@ -769,43 +769,43 @@ done:
     return attached;
 }
 
-struct JavaCPP_hidden JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback {
-    JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback() : ptr(NULL), obj(NULL) { }
+struct JavaCPP_hidden JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback {
+    JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback() : ptr(NULL), obj(NULL) { }
     int operator()(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3);
     int (*ptr)(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3);
     jobject obj; static jmethodID mid;
 };
-jmethodID JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback::mid = NULL;
+jmethodID JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback::mid = NULL;
 
 
-static JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[10];
+static JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[10];
 
-static void JavaCPP_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate(void *p) { delete (std::vector<A2Gid>::iterator*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_A2GidVector_deallocate(void *p) { delete (std::vector<A2Gid>*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_BtMetaInfoData_deallocate(void *p) { delete (aria2::BtMetaInfoData*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_deallocate(void *p) { 
-    int n = sizeof(JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances) / sizeof(JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[0]);
-    for (int i = 0; i < n; i++) { if (JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[i].obj == ((JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback*)p)->obj) JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[i].obj = NULL; }
-    JNIEnv *e; bool a = JavaCPP_getEnv(&e); if (e != NULL) e->DeleteWeakGlobalRef((jweak)((JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback*)p)->obj); delete (JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback*)p; JavaCPP_detach(a); }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_FileData_deallocate(void *p) { delete (aria2::FileData*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_StringStingPairVector_deallocate(void *p) { delete (std::vector<std::pair<std::string,std::string> >*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate(void *p) { delete (std::vector<FileData>::iterator*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_FileDataVector_deallocate(void *p) { delete (std::vector<FileData>*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_GlobalStat_deallocate(void *p) { delete (aria2::GlobalStat*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_SessionConfig_deallocate(void *p) { delete (aria2::SessionConfig*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_StringStingPair_deallocate(void *p) { delete (std::pair<std::string,std::string>*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate(void *p) { delete (std::vector<std::string>::iterator*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_StringVector_deallocate(void *p) { delete (std::vector<std::string>*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate(void *p) { delete (std::vector<std::vector<std::string> >::iterator*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_StringVectorVector_deallocate(void *p) { delete (std::vector<std::vector<std::string> >*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_UriData_deallocate(void *p) { delete (aria2::UriData*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate(void *p) { delete (std::vector<UriData>::iterator*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_UriDataVector_deallocate(void *p) { delete (std::vector<UriData>*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_BtMetaInfoData_deallocateArray(void* p) { delete[] (aria2::BtMetaInfoData*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_FileData_deallocateArray(void* p) { delete[] (aria2::FileData*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_GlobalStat_deallocateArray(void* p) { delete[] (aria2::GlobalStat*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_SessionConfig_deallocateArray(void* p) { delete[] (aria2::SessionConfig*)p; }
-static void JavaCPP_com_zsaltedfish_aria2_cpp_UriData_deallocateArray(void* p) { delete[] (aria2::UriData*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate(void *p) { delete (std::vector<A2Gid>::iterator*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_A2GidVector_deallocate(void *p) { delete (std::vector<A2Gid>*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_deallocate(void *p) { delete (aria2::BtMetaInfoData*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_deallocate(void *p) { 
+    int n = sizeof(JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances) / sizeof(JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[0]);
+    for (int i = 0; i < n; i++) { if (JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[i].obj == ((JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback*)p)->obj) JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[i].obj = NULL; }
+    JNIEnv *e; bool a = JavaCPP_getEnv(&e); if (e != NULL) e->DeleteWeakGlobalRef((jweak)((JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback*)p)->obj); delete (JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback*)p; JavaCPP_detach(a); }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_FileData_deallocate(void *p) { delete (aria2::FileData*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_deallocate(void *p) { delete (std::vector<std::pair<std::string,std::string> >*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate(void *p) { delete (std::vector<FileData>::iterator*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_FileDataVector_deallocate(void *p) { delete (std::vector<FileData>*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_GlobalStat_deallocate(void *p) { delete (aria2::GlobalStat*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_SessionConfig_deallocate(void *p) { delete (aria2::SessionConfig*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_StringStingPair_deallocate(void *p) { delete (std::pair<std::string,std::string>*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate(void *p) { delete (std::vector<std::string>::iterator*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVector_deallocate(void *p) { delete (std::vector<std::string>*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate(void *p) { delete (std::vector<std::vector<std::string> >::iterator*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVectorVector_deallocate(void *p) { delete (std::vector<std::vector<std::string> >*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_UriData_deallocate(void *p) { delete (aria2::UriData*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate(void *p) { delete (std::vector<UriData>::iterator*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_UriDataVector_deallocate(void *p) { delete (std::vector<UriData>*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_deallocateArray(void* p) { delete[] (aria2::BtMetaInfoData*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_FileData_deallocateArray(void* p) { delete[] (aria2::FileData*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_GlobalStat_deallocateArray(void* p) { delete[] (aria2::GlobalStat*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_SessionConfig_deallocateArray(void* p) { delete[] (aria2::SessionConfig*)p; }
+static void JavaCPP_io_github_ssaltedfish_aria2_cpp_UriData_deallocateArray(void* p) { delete[] (aria2::UriData*)p; }
 
 static const char* JavaCPP_members[32][8] = {
         { NULL },
@@ -825,13 +825,13 @@ static const char* JavaCPP_members[32][8] = {
         { NULL },
         { NULL },
         { NULL },
-        { "sizeof", "index", "length", "path", "selected", "uris", "completedLength" },
+        { "sizeof", "index", "length", "path", "selected", "completedLength", "uris" },
         { "sizeof" },
         { NULL },
         { "sizeof", "status", "uri" },
         { "sizeof" },
         { "sizeof" },
-        { "sizeof", "uploadSpeed", "numStopped", "downloadSpeed", "numWaiting", "numActive" },
+        { "sizeof", "downloadSpeed", "uploadSpeed", "numWaiting", "numStopped", "numActive" },
         { "sizeof" },
         { "sizeof" },
         { "sizeof" },
@@ -858,13 +858,13 @@ static int JavaCPP_offsets[32][8] = {
         { -1 },
         { -1 },
         { -1 },
-        { sizeof(aria2::FileData), offsetof(aria2::FileData, index), offsetof(aria2::FileData, length), offsetof(aria2::FileData, path), offsetof(aria2::FileData, selected), offsetof(aria2::FileData, uris), offsetof(aria2::FileData, completedLength) },
+        { sizeof(aria2::FileData), offsetof(aria2::FileData, index), offsetof(aria2::FileData, length), offsetof(aria2::FileData, path), offsetof(aria2::FileData, selected), offsetof(aria2::FileData, completedLength), offsetof(aria2::FileData, uris) },
         { sizeof(std::vector<std::pair<std::string,std::string> >) },
         { -1 },
         { sizeof(aria2::UriData), offsetof(aria2::UriData, status), offsetof(aria2::UriData, uri) },
         { sizeof(std::vector<FileData>::iterator) },
         { sizeof(std::vector<FileData>) },
-        { sizeof(aria2::GlobalStat), offsetof(aria2::GlobalStat, uploadSpeed), offsetof(aria2::GlobalStat, numStopped), offsetof(aria2::GlobalStat, downloadSpeed), offsetof(aria2::GlobalStat, numWaiting), offsetof(aria2::GlobalStat, numActive) },
+        { sizeof(aria2::GlobalStat), offsetof(aria2::GlobalStat, downloadSpeed), offsetof(aria2::GlobalStat, uploadSpeed), offsetof(aria2::GlobalStat, numWaiting), offsetof(aria2::GlobalStat, numStopped), offsetof(aria2::GlobalStat, numActive) },
         { sizeof(aria2::SessionConfig) },
         { sizeof(std::pair<std::string,std::string>) },
         { sizeof(std::vector<std::string>::iterator) },
@@ -1051,7 +1051,7 @@ JNIEXPORT void JNICALL JNI_OnUnload(JavaVM* vm, void* reserved) {
     JavaCPP_vm = NULL;
 }
 
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator_get(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_00024Iterator_get(JNIEnv* env, jobject obj) {
     std::vector<A2Gid>::iterator* ptr = (std::vector<A2Gid>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1073,7 +1073,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator
     }
     return rarg;
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<A2Gid>::iterator* ptr = (std::vector<A2Gid>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1102,7 +1102,7 @@ JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_00024Itera
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
     std::vector<A2Gid>::iterator* ptr = (std::vector<A2Gid>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1133,7 +1133,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterat
     return rarg;
 }
 
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_get(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_get(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1155,7 +1155,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_get(JNIEnv* e
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_put__JJ(JNIEnv* env, jobject obj, jlong arg0, jlong arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_put__JJ(JNIEnv* env, jobject obj, jlong arg0, jlong arg1) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1176,7 +1176,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_put__JJ(JNI
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_put__Lcom_zsaltedfish_aria2_cpp_A2GidVector_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_put__Lio_github_ssaltedfish_aria2_cpp_A2GidVector_2(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1213,7 +1213,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_put__Lcom_z
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_begin(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_begin(JNIEnv* env, jobject obj) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1228,7 +1228,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_begin(JNIEn
         rptr = new std::vector<A2Gid>::iterator(ptr->begin());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 9);
             if (rarg != NULL) {
@@ -1244,7 +1244,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_begin(JNIEn
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_end(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_end(JNIEnv* env, jobject obj) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1259,7 +1259,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_end(JNIEnv*
         rptr = new std::vector<A2Gid>::iterator(ptr->end());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 9);
             if (rarg != NULL) {
@@ -1275,7 +1275,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_end(JNIEnv*
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_size(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_size(JNIEnv* env, jobject obj) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1297,7 +1297,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_size(JNIEnv* 
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1319,7 +1319,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_erase(JNIEn
         rptr = new std::vector<A2Gid>::iterator(ptr->erase(*ptr0));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 9);
             if (rarg != NULL) {
@@ -1335,7 +1335,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_erase(JNIEn
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_insert(JNIEnv* env, jobject obj, jobject arg0, jlong arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_insert(JNIEnv* env, jobject obj, jobject arg0, jlong arg1) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1357,7 +1357,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_insert(JNIE
         rptr = new std::vector<A2Gid>::iterator(ptr->insert(*ptr0, arg1));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_A2GidVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 9);
             if (rarg != NULL) {
@@ -1373,7 +1373,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_insert(JNIE
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<A2Gid>* ptr = (std::vector<A2Gid>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1392,12 +1392,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_resize(JNIEnv*
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_allocate__(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_allocate__(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         std::vector<A2Gid>* rptr = new std::vector<A2Gid>();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_A2GidVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_A2GidVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -1406,12 +1406,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_allocate__(JNI
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_A2GidVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         std::vector<A2Gid>* rptr = new std::vector<A2Gid>((size_t)arg0);
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_A2GidVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_A2GidVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -1421,7 +1421,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_A2GidVector_allocate__J(JN
     }
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_name__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_name__(JNIEnv* env, jobject obj) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1444,7 +1444,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_name__(J
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_name__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_name__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1463,7 +1463,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_name__Lo
     ptr->name = (std::basic_string< char >&)adapter0;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_comment__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_comment__(JNIEnv* env, jobject obj) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1486,7 +1486,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_comment_
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_comment__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_comment__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1505,7 +1505,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_comment_
     ptr->comment = (std::basic_string< char >&)adapter0;
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_mode__(JNIEnv* env, jobject obj) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_mode__(JNIEnv* env, jobject obj) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1518,7 +1518,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_mode__(JNIE
     rarg = (jint)rval;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_mode__I(JNIEnv* env, jobject obj, jint arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_mode__I(JNIEnv* env, jobject obj, jint arg0) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1530,12 +1530,12 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_mode__I(
     ptr->mode = (aria2::BtFileMode)arg0;
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_allocate(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_allocate(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         aria2::BtMetaInfoData* rptr = new aria2::BtMetaInfoData();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_BtMetaInfoData_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -1544,7 +1544,21 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_allocate(JN
         env->Throw(exc);
     }
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_announceList__(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
+    jthrowable exc = NULL;
+    try {
+        aria2::BtMetaInfoData* rptr = new aria2::BtMetaInfoData[arg0];
+        jlong rcapacity = arg0;
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_deallocateArray);
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_announceList__(JNIEnv* env, jobject obj) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1563,7 +1577,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_announce
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_announceList__Lcom_zsaltedfish_aria2_cpp_StringVectorVector_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_announceList__Lio_github_ssaltedfish_aria2_cpp_StringVectorVector_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1582,7 +1596,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_announce
     ptr->announceList = *ptr0;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_creationDate__Lorg_bytedeco_javacpp_Pointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_creationDate__Lorg_bytedeco_javacpp_Pointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1601,7 +1615,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_creation
     ptr->creationDate = *(time_t*)ptr0;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_creationDate__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_creationDate__(JNIEnv* env, jobject obj) {
     aria2::BtMetaInfoData* ptr = (aria2::BtMetaInfoData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1620,63 +1634,49 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_creation
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_BtMetaInfoData_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
-    jthrowable exc = NULL;
-    try {
-        aria2::BtMetaInfoData* rptr = new aria2::BtMetaInfoData[arg0];
-        jlong rcapacity = arg0;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_BtMetaInfoData_deallocateArray);
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
 
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[0](arg0, arg1, arg2, arg3);
 }
-
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[0](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback1(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[1](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback1(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[1](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback2(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[2](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback2(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[2](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback3(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[3](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback3(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[3](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback4(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[4](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback4(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[4](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback5(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[5](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback5(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[5](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback6(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[6](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback6(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[6](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback7(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[7](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback7(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[7](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback8(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[8](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback8(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[8](arg0, arg1, arg2, arg3);
+JNIEXPORT int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback9(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+    return JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[9](arg0, arg1, arg2, arg3);
 }
-JNIEXPORT int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback9(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
-    return JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[9](arg0, arg1, arg2, arg3);
-}
-static int (*JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callbacks[10])(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) = {
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback1,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback2,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback3,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback4,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback5,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback6,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback7,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback8,
-        JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback9 };
-int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback::operator()(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
+static int (*JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callbacks[10])(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) = {
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback1,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback2,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback3,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback4,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback5,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback6,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback7,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback8,
+        JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callback9 };
+int JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback::operator()(aria2::Session* arg0, ::aria2::DownloadEvent arg1, aria2::A2Gid arg2, void* arg3) {
     jint rarg = 0;
     jthrowable exc = NULL;
     JNIEnv* env;
@@ -1716,24 +1716,24 @@ int JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback::operator()(aria2::S
         obj = JavaCPP_createPointer(env, 16);
         obj = obj == NULL ? NULL : env->NewGlobalRef(obj);
         if (obj == NULL) {
-            JavaCPP_log("Error creating global reference of com.zsaltedfish.aria2.cpp.DownloadEventCallback instance for callback.");
+            JavaCPP_log("Error creating global reference of io.github.ssaltedfish.aria2.cpp.DownloadEventCallback instance for callback.");
         } else {
             env->SetLongField(obj, JavaCPP_addressFID, ptr_to_jlong(this));
         }
         for (int i = 0; i < 10; i++) {
-            if (this == &JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[i]) {
-                ptr = JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callbacks[i];
+            if (this == &JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[i]) {
+                ptr = JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callbacks[i];
                 break;
             }
         }
     }
     if (mid == NULL) {
-        mid = JavaCPP_getMethodID(env, 16, "call", "(Lcom/zsaltedfish/aria2/cpp/Session;Lcom/zsaltedfish/aria2/global/Aria2$DownloadEvent;JLorg/bytedeco/javacpp/Pointer;)I");
+        mid = JavaCPP_getMethodID(env, 16, "call", "(Lio/github/ssaltedfish/aria2/cpp/Session;Lio/github/ssaltedfish/aria2/global/Aria2$DownloadEvent;JLorg/bytedeco/javacpp/Pointer;)I");
     }
     if (obj == NULL) {
-        JavaCPP_log("Function pointer object is NULL in callback for com.zsaltedfish.aria2.cpp.DownloadEventCallback.");
+        JavaCPP_log("Function pointer object is NULL in callback for io.github.ssaltedfish.aria2.cpp.DownloadEventCallback.");
     } else if (mid == NULL) {
-        JavaCPP_log("Error getting method ID of function caller \"public native int com.zsaltedfish.aria2.cpp.DownloadEventCallback.call(com.zsaltedfish.aria2.cpp.Session,com.zsaltedfish.aria2.global.Aria2$DownloadEvent,long,org.bytedeco.javacpp.Pointer)\" for callback.");
+        JavaCPP_log("Error getting method ID of function caller \"public native int io.github.ssaltedfish.aria2.cpp.DownloadEventCallback.call(io.github.ssaltedfish.aria2.cpp.Session,io.github.ssaltedfish.aria2.global.Aria2$DownloadEvent,long,org.bytedeco.javacpp.Pointer)\" for callback.");
     } else {
         rarg = env->CallIntMethodA(obj, mid, args);
         if ((exc = env->ExceptionOccurred()) != NULL) {
@@ -1759,27 +1759,27 @@ end:
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate(JNIEnv* env, jobject obj) {
     obj = env->NewWeakGlobalRef(obj);
     if (obj == NULL) {
-        JavaCPP_log("Error creating global reference of com.zsaltedfish.aria2.cpp.DownloadEventCallback instance for callback.");
+        JavaCPP_log("Error creating global reference of io.github.ssaltedfish.aria2.cpp.DownloadEventCallback instance for callback.");
         return;
     }
-    JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback* rptr = new (std::nothrow) JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback;
+    JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback* rptr = new (std::nothrow) JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback;
     if (rptr != NULL) {
         rptr->obj = obj;
-        JavaCPP_initPointer(env, obj, rptr, 1, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, 1, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_deallocate);
         for (int i = 0; i < 10; i++) {
-            if (JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[i].obj == NULL) {
-                rptr->ptr = JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_allocate_callbacks[i];
-                JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_instances[i] = *rptr;
+            if (JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[i].obj == NULL) {
+                rptr->ptr = JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_allocate_callbacks[i];
+                JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_instances[i] = *rptr;
                 break;
             }
         }
     }
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadEventCallback_call(JNIEnv* env, jobject obj, jobject arg0, jobject arg1, jlong arg2, jobject arg3) {
-    JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback* ptr = (JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_call(JNIEnv* env, jobject obj, jobject arg0, jobject arg1, jlong arg2, jobject arg3) {
+    JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback* ptr = (JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
         return 0;
@@ -1814,7 +1814,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadEventCallback_call
     return rarg;
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getFile(JNIEnv* env, jobject obj, jint arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getFile(JNIEnv* env, jobject obj, jint arg0) {
     aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1829,7 +1829,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getFile(
         rptr = new aria2::FileData(ptr->getFile(arg0));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_FileData_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileData_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 17);
             if (rarg != NULL) {
@@ -1845,7 +1845,38 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getFile(
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getOption__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getOptions(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = NULL;
+    aria2::KeyVals* rptr;
+    jthrowable exc = NULL;
+    try {
+        rptr = (aria2::KeyVals*)new aria2::KeyVals(ptr->getOptions());
+        jlong rcapacity = 1;
+        void* rowner = (void*)rptr;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_deallocate;
+        if (rptr != NULL) {
+            rarg = JavaCPP_createPointer(env, 18);
+            if (rarg != NULL) {
+                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
+            }
+        }
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getOption__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1892,7 +1923,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getOptio
     }
     return rarg;
 }
-JNIEXPORT jstring JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getOption__Ljava_lang_String_2(JNIEnv* env, jobject obj, jstring arg0) {
+JNIEXPORT jstring JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getOption__Ljava_lang_String_2(JNIEnv* env, jobject obj, jstring arg0) {
     aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1923,38 +1954,7 @@ JNIEXPORT jstring JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getOptio
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getOptions(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jobject rarg = NULL;
-    aria2::KeyVals* rptr;
-    jthrowable exc = NULL;
-    try {
-        rptr = (aria2::KeyVals*)new aria2::KeyVals(ptr->getOptions());
-        jlong rcapacity = 1;
-        void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringStingPairVector_deallocate;
-        if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 18);
-            if (rarg != NULL) {
-                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
-            }
-        }
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getStatus(JNIEnv* env, jobject obj) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getStatus(JNIEnv* env, jobject obj) {
     aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -1976,7 +1976,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getStatus(J
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getFiles(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getFiles(JNIEnv* env, jobject obj) {
     aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2008,7 +2008,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getFiles
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getFollowing(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getFollowing(JNIEnv* env, jobject obj) {
     aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2030,39 +2030,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getFollowi
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getBitfield(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jobject rarg = NULL;
-    signed char* rptr;
-    jthrowable exc = NULL;
-    try {
-        StringAdapter< char > radapter(ptr->getBitfield());
-        rptr = radapter;
-        jlong rcapacity = (jlong)radapter.size;
-        void* rowner = radapter.owner;
-        void (*deallocator)(void*) = rowner != NULL ? &StringAdapter< char >::deallocate : 0;
-        if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 11);
-            if (rarg != NULL) {
-                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
-            }
-        }
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getBelongsTo(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getBelongsTo(JNIEnv* env, jobject obj) {
     aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2084,322 +2052,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getBelongs
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getFollowedBy(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jobject rarg = NULL;
-    aria2::A2Gid* rptr;
-    jthrowable exc = NULL;
-    try {
-        VectorAdapter< aria2::A2Gid > radapter(ptr->getFollowedBy());
-        rptr = radapter;
-        jlong rcapacity = (jlong)radapter.size;
-        void* rowner = radapter.owner;
-        void (*deallocator)(void*) = rowner != NULL ? &VectorAdapter< aria2::A2Gid >::deallocate : 0;
-        if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 19);
-            if (rarg != NULL) {
-                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
-            }
-        }
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getNumPieces(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = ptr->getNumPieces();
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getPieceLength(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jlong rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        size_t rval = (size_t)ptr->getPieceLength();
-        rarg = (jlong)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getDownloadSpeed(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = ptr->getDownloadSpeed();
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getTotalLength(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jlong rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int64_t rval = (int64_t)ptr->getTotalLength();
-        rarg = (jlong)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getUploadSpeed(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = ptr->getUploadSpeed();
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getInfoHash(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jobject rarg = NULL;
-    signed char* rptr;
-    jthrowable exc = NULL;
-    try {
-        StringAdapter< char > radapter(ptr->getInfoHash());
-        rptr = radapter;
-        jlong rcapacity = (jlong)radapter.size;
-        void* rowner = radapter.owner;
-        void (*deallocator)(void*) = rowner != NULL ? &StringAdapter< char >::deallocate : 0;
-        if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 11);
-            if (rarg != NULL) {
-                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
-            }
-        }
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getErrorCode(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = ptr->getErrorCode();
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getNumFiles(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = ptr->getNumFiles();
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getBtMetaInfo(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jobject rarg = NULL;
-    aria2::BtMetaInfoData* rptr;
-    jthrowable exc = NULL;
-    try {
-        rptr = new aria2::BtMetaInfoData(ptr->getBtMetaInfo());
-        jlong rcapacity = 1;
-        void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_BtMetaInfoData_deallocate;
-        if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 12);
-            if (rarg != NULL) {
-                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
-            }
-        }
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getCompletedLength(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jlong rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int64_t rval = (int64_t)ptr->getCompletedLength();
-        rarg = (jlong)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getConnections(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = ptr->getConnections();
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getUploadLength(JNIEnv* env, jobject obj) {
-    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jlong rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int64_t rval = (int64_t)ptr->getUploadLength();
-        rarg = (jlong)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getDir(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getDir(JNIEnv* env, jobject obj) {
     aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2431,8 +2084,355 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_DownloadHandle_getDir(J
     }
     return rarg;
 }
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getNumFiles(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = ptr->getNumFiles();
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
 
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_index__(JNIEnv* env, jobject obj) {
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getBtMetaInfo(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = NULL;
+    aria2::BtMetaInfoData* rptr;
+    jthrowable exc = NULL;
+    try {
+        rptr = new aria2::BtMetaInfoData(ptr->getBtMetaInfo());
+        jlong rcapacity = 1;
+        void* rowner = (void*)rptr;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_BtMetaInfoData_deallocate;
+        if (rptr != NULL) {
+            rarg = JavaCPP_createPointer(env, 12);
+            if (rarg != NULL) {
+                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
+            }
+        }
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getDownloadSpeed(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = ptr->getDownloadSpeed();
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getErrorCode(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = ptr->getErrorCode();
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getCompletedLength(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jlong rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int64_t rval = (int64_t)ptr->getCompletedLength();
+        rarg = (jlong)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getTotalLength(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jlong rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int64_t rval = (int64_t)ptr->getTotalLength();
+        rarg = (jlong)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getUploadLength(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jlong rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int64_t rval = (int64_t)ptr->getUploadLength();
+        rarg = (jlong)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getBitfield(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = NULL;
+    signed char* rptr;
+    jthrowable exc = NULL;
+    try {
+        StringAdapter< char > radapter(ptr->getBitfield());
+        rptr = radapter;
+        jlong rcapacity = (jlong)radapter.size;
+        void* rowner = radapter.owner;
+        void (*deallocator)(void*) = rowner != NULL ? &StringAdapter< char >::deallocate : 0;
+        if (rptr != NULL) {
+            rarg = JavaCPP_createPointer(env, 11);
+            if (rarg != NULL) {
+                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
+            }
+        }
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getUploadSpeed(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = ptr->getUploadSpeed();
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getPieceLength(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jlong rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        size_t rval = (size_t)ptr->getPieceLength();
+        rarg = (jlong)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getNumPieces(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = ptr->getNumPieces();
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getConnections(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = ptr->getConnections();
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getInfoHash(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = NULL;
+    signed char* rptr;
+    jthrowable exc = NULL;
+    try {
+        StringAdapter< char > radapter(ptr->getInfoHash());
+        rptr = radapter;
+        jlong rcapacity = (jlong)radapter.size;
+        void* rowner = radapter.owner;
+        void (*deallocator)(void*) = rowner != NULL ? &StringAdapter< char >::deallocate : 0;
+        if (rptr != NULL) {
+            rarg = JavaCPP_createPointer(env, 11);
+            if (rarg != NULL) {
+                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
+            }
+        }
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_DownloadHandle_getFollowedBy(JNIEnv* env, jobject obj) {
+    aria2::DownloadHandle* ptr = (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = NULL;
+    aria2::A2Gid* rptr;
+    jthrowable exc = NULL;
+    try {
+        VectorAdapter< aria2::A2Gid > radapter(ptr->getFollowedBy());
+        rptr = radapter;
+        jlong rcapacity = (jlong)radapter.size;
+        void* rowner = radapter.owner;
+        void (*deallocator)(void*) = rowner != NULL ? &VectorAdapter< aria2::A2Gid >::deallocate : 0;
+        if (rptr != NULL) {
+            rarg = JavaCPP_createPointer(env, 19);
+            if (rarg != NULL) {
+                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
+            }
+        }
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_index__(JNIEnv* env, jobject obj) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2445,7 +2445,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_index__(JNIEnv* e
     rarg = (jint)rval;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_index__I(JNIEnv* env, jobject obj, jint arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_index__I(JNIEnv* env, jobject obj, jint arg0) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2457,7 +2457,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_index__I(JNIEn
     ptr->index = arg0;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_length__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_length__J(JNIEnv* env, jobject obj, jlong arg0) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2469,7 +2469,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_length__J(JNIE
     ptr->length = (int64_t)arg0;
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_length__(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_length__(JNIEnv* env, jobject obj) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2482,7 +2482,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_length__(JNIEnv*
     rarg = (jlong)rval;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_path__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_path__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2501,7 +2501,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_path__Lorg_byt
     ptr->path = (std::basic_string< char >&)adapter0;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_path__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_path__(JNIEnv* env, jobject obj) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2524,12 +2524,12 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_path__(JNIEnv*
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_allocate(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_allocate(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         aria2::FileData* rptr = new aria2::FileData();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_FileData_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileData_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -2538,7 +2538,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_allocate(JNIEnv* 
         env->Throw(exc);
     }
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_selected__(JNIEnv* env, jobject obj) {
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_selected__(JNIEnv* env, jobject obj) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2551,7 +2551,7 @@ JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_selected__(JN
     rarg = (jboolean)rval;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_selected__Z(JNIEnv* env, jobject obj, jboolean arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_selected__Z(JNIEnv* env, jobject obj, jboolean arg0) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2563,12 +2563,12 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_selected__Z(JN
     ptr->selected = (bool)arg0;
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         aria2::FileData* rptr = new aria2::FileData[arg0];
         jlong rcapacity = arg0;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_FileData_deallocateArray);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileData_deallocateArray);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -2577,7 +2577,51 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_allocateArray(JNI
         env->Throw(exc);
     }
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_uris__(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_completedLength__(JNIEnv* env, jobject obj) {
+    aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jlong rarg = 0;
+    int64_t rval = (int64_t)ptr->completedLength;
+    rarg = (jlong)rval;
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_completedLength__J(JNIEnv* env, jobject obj, jlong arg0) {
+    aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = obj;
+    ptr->completedLength = (int64_t)arg0;
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_uris__Lio_github_ssaltedfish_aria2_cpp_UriData_2(JNIEnv* env, jobject obj, jobject arg0) {
+    aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    aria2::UriData* ptr0 = arg0 == NULL ? NULL : (aria2::UriData*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong size0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_limitFID);
+    void* owner0 = JavaCPP_getPointerOwner(env, arg0);
+    jlong position0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_positionFID);
+    ptr0 += position0;
+    size0 -= position0;
+    VectorAdapter< aria2::UriData > adapter0(ptr0, size0, owner0);
+    jobject rarg = obj;
+    ptr->uris = adapter0;
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileData_uris__(JNIEnv* env, jobject obj) {
     aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2600,52 +2644,8 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_uris__(JNIEnv*
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_uris__Lcom_zsaltedfish_aria2_cpp_UriData_2(JNIEnv* env, jobject obj, jobject arg0) {
-    aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    aria2::UriData* ptr0 = arg0 == NULL ? NULL : (aria2::UriData*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong size0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_limitFID);
-    void* owner0 = JavaCPP_getPointerOwner(env, arg0);
-    jlong position0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_positionFID);
-    ptr0 += position0;
-    size0 -= position0;
-    VectorAdapter< aria2::UriData > adapter0(ptr0, size0, owner0);
-    jobject rarg = obj;
-    ptr->uris = adapter0;
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_completedLength__J(JNIEnv* env, jobject obj, jlong arg0) {
-    aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jobject rarg = obj;
-    ptr->completedLength = (int64_t)arg0;
-    return rarg;
-}
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_FileData_completedLength__(JNIEnv* env, jobject obj) {
-    aria2::FileData* ptr = (aria2::FileData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jlong rarg = 0;
-    int64_t rval = (int64_t)ptr->completedLength;
-    rarg = (jlong)rval;
-    return rarg;
-}
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_00024Iterator_get(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_00024Iterator_get(JNIEnv* env, jobject obj) {
     std::vector<FileData>::iterator* ptr = (std::vector<FileData>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2673,7 +2673,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_00024Ite
     }
     return rarg;
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<FileData>::iterator* ptr = (std::vector<FileData>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2702,7 +2702,7 @@ JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_00024It
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
     std::vector<FileData>::iterator* ptr = (std::vector<FileData>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2733,7 +2733,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_00024Ite
     return rarg;
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_get(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_get(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2761,7 +2761,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_get(JNIE
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_put__JLcom_zsaltedfish_aria2_cpp_FileData_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_put__JLio_github_ssaltedfish_aria2_cpp_FileData_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2789,7 +2789,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_put__JLc
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_put__Lcom_zsaltedfish_aria2_cpp_FileDataVector_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_put__Lio_github_ssaltedfish_aria2_cpp_FileDataVector_2(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2826,7 +2826,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_put__Lco
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_begin(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_begin(JNIEnv* env, jobject obj) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2841,7 +2841,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_begin(JN
         rptr = new std::vector<FileData>::iterator(ptr->begin());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 21);
             if (rarg != NULL) {
@@ -2857,7 +2857,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_begin(JN
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_end(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_end(JNIEnv* env, jobject obj) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2872,7 +2872,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_end(JNIE
         rptr = new std::vector<FileData>::iterator(ptr->end());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 21);
             if (rarg != NULL) {
@@ -2888,7 +2888,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_end(JNIE
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_size(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_size(JNIEnv* env, jobject obj) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2910,7 +2910,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_size(JNIEn
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2932,7 +2932,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_erase(JN
         rptr = new std::vector<FileData>::iterator(ptr->erase(*ptr0));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 21);
             if (rarg != NULL) {
@@ -2948,7 +2948,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_erase(JN
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_insert(JNIEnv* env, jobject obj, jobject arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_insert(JNIEnv* env, jobject obj, jobject arg0, jobject arg1) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -2977,7 +2977,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_insert(J
         rptr = new std::vector<FileData>::iterator(ptr->insert(*ptr0, *ptr1));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileDataVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 21);
             if (rarg != NULL) {
@@ -2993,7 +2993,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_insert(J
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<FileData>* ptr = (std::vector<FileData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3012,12 +3012,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_resize(JNIE
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_allocate__(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_allocate__(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         std::vector<FileData>* rptr = new std::vector<FileData>();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_FileDataVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileDataVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3026,12 +3026,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_allocate__(
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_FileDataVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         std::vector<FileData>* rptr = new std::vector<FileData>((size_t)arg0);
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_FileDataVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_FileDataVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3041,12 +3041,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_FileDataVector_allocate__J
     }
 }
 
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_allocate(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_allocate(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         aria2::GlobalStat* rptr = new aria2::GlobalStat();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_GlobalStat_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_GlobalStat_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3055,12 +3055,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_allocate(JNIEnv
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         aria2::GlobalStat* rptr = new aria2::GlobalStat[arg0];
         jlong rcapacity = arg0;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_GlobalStat_deallocateArray);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_GlobalStat_deallocateArray);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3069,7 +3069,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_allocateArray(J
         env->Throw(exc);
     }
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_uploadSpeed__I(JNIEnv* env, jobject obj, jint arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_downloadSpeed__I(JNIEnv* env, jobject obj, jint arg0) {
     aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3078,48 +3078,10 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_uploadSpeed_
     jlong position = env->GetLongField(obj, JavaCPP_positionFID);
     ptr += position;
     jobject rarg = obj;
-    ptr->uploadSpeed = arg0;
+    ptr->downloadSpeed = arg0;
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_uploadSpeed__(JNIEnv* env, jobject obj) {
-    aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jint rarg = 0;
-    int rval = ptr->uploadSpeed;
-    rarg = (jint)rval;
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numStopped__I(JNIEnv* env, jobject obj, jint arg0) {
-    aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jobject rarg = obj;
-    ptr->numStopped = arg0;
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numStopped__(JNIEnv* env, jobject obj) {
-    aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jint rarg = 0;
-    int rval = ptr->numStopped;
-    rarg = (jint)rval;
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_downloadSpeed__(JNIEnv* env, jobject obj) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_downloadSpeed__(JNIEnv* env, jobject obj) {
     aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3132,7 +3094,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_downloadSpeed__
     rarg = (jint)rval;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_downloadSpeed__I(JNIEnv* env, jobject obj, jint arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_uploadSpeed__I(JNIEnv* env, jobject obj, jint arg0) {
     aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3141,10 +3103,10 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_downloadSpee
     jlong position = env->GetLongField(obj, JavaCPP_positionFID);
     ptr += position;
     jobject rarg = obj;
-    ptr->downloadSpeed = arg0;
+    ptr->uploadSpeed = arg0;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numWaiting__I(JNIEnv* env, jobject obj, jint arg0) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_uploadSpeed__(JNIEnv* env, jobject obj) {
     aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3152,11 +3114,12 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numWaiting__
     }
     jlong position = env->GetLongField(obj, JavaCPP_positionFID);
     ptr += position;
-    jobject rarg = obj;
-    ptr->numWaiting = arg0;
+    jint rarg = 0;
+    int rval = ptr->uploadSpeed;
+    rarg = (jint)rval;
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numWaiting__(JNIEnv* env, jobject obj) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_numWaiting__(JNIEnv* env, jobject obj) {
     aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3169,7 +3132,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numWaiting__(JN
     rarg = (jint)rval;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numActive__I(JNIEnv* env, jobject obj, jint arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_numWaiting__I(JNIEnv* env, jobject obj, jint arg0) {
     aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3178,10 +3141,35 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numActive__I
     jlong position = env->GetLongField(obj, JavaCPP_positionFID);
     ptr += position;
     jobject rarg = obj;
-    ptr->numActive = arg0;
+    ptr->numWaiting = arg0;
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numActive__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_numStopped__I(JNIEnv* env, jobject obj, jint arg0) {
+    aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = obj;
+    ptr->numStopped = arg0;
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_numStopped__(JNIEnv* env, jobject obj) {
+    aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jint rarg = 0;
+    int rval = ptr->numStopped;
+    rarg = (jint)rval;
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_numActive__(JNIEnv* env, jobject obj) {
     aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3194,14 +3182,26 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_GlobalStat_numActive__(JNI
     rarg = (jint)rval;
     return rarg;
 }
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_GlobalStat_numActive__I(JNIEnv* env, jobject obj, jint arg0) {
+    aria2::GlobalStat* ptr = (aria2::GlobalStat*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = obj;
+    ptr->numActive = arg0;
+    return rarg;
+}
 
 
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_allocate(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_allocate(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         aria2::SessionConfig* rptr = new aria2::SessionConfig();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_SessionConfig_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_SessionConfig_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3210,12 +3210,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_allocate(JNI
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         aria2::SessionConfig* rptr = new aria2::SessionConfig[arg0];
         jlong rcapacity = arg0;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_SessionConfig_deallocateArray);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_SessionConfig_deallocateArray);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3224,7 +3224,32 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_allocateArra
         env->Throw(exc);
     }
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_userData__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_keepRunning__Z(JNIEnv* env, jobject obj, jboolean arg0) {
+    aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jobject rarg = obj;
+    ptr->keepRunning = (bool)arg0;
+    return rarg;
+}
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_keepRunning__(JNIEnv* env, jobject obj) {
+    aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
+    if (ptr == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
+        return 0;
+    }
+    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
+    ptr += position;
+    jboolean rarg = 0;
+    bool rval = (bool)ptr->keepRunning;
+    rarg = (jboolean)rval;
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_userData__(JNIEnv* env, jobject obj) {
     aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3243,7 +3268,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_userData_
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_userData__Lorg_bytedeco_javacpp_Pointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_userData__Lorg_bytedeco_javacpp_Pointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3258,32 +3283,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_userData_
     ptr->userData = ptr0;
     return rarg;
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_keepRunning__(JNIEnv* env, jobject obj) {
-    aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jboolean rarg = 0;
-    bool rval = (bool)ptr->keepRunning;
-    rarg = (jboolean)rval;
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_keepRunning__Z(JNIEnv* env, jobject obj, jboolean arg0) {
-    aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
-    if (ptr == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
-        return 0;
-    }
-    jlong position = env->GetLongField(obj, JavaCPP_positionFID);
-    ptr += position;
-    jobject rarg = obj;
-    ptr->keepRunning = (bool)arg0;
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_useSignalHandler__Z(JNIEnv* env, jobject obj, jboolean arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_useSignalHandler__Z(JNIEnv* env, jobject obj, jboolean arg0) {
     aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3295,7 +3295,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_useSignal
     ptr->useSignalHandler = (bool)arg0;
     return rarg;
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_useSignalHandler__(JNIEnv* env, jobject obj) {
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_useSignalHandler__(JNIEnv* env, jobject obj) {
     aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3308,7 +3308,7 @@ JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_useSigna
     rarg = (jboolean)rval;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_downloadEventCallback__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_downloadEventCallback__(JNIEnv* env, jobject obj) {
     aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3317,12 +3317,12 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_downloadE
     jlong position = env->GetLongField(obj, JavaCPP_positionFID);
     ptr += position;
     jobject rarg = NULL;
-    JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback* rptr;
-    rptr = new (std::nothrow) JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback;
+    JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback* rptr;
+    rptr = new (std::nothrow) JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback;
     if (rptr != NULL) rptr->ptr = ptr->downloadEventCallback;
     jlong rcapacity = 1;
     void* rowner = (void*)rptr;
-    void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback_deallocate;
+    void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback_deallocate;
     if (rptr != NULL) {
         rarg = JavaCPP_createPointer(env, 16);
         if (rarg != NULL) {
@@ -3331,7 +3331,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_downloadE
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_downloadEventCallback__Lcom_zsaltedfish_aria2_cpp_DownloadEventCallback_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_SessionConfig_downloadEventCallback__Lio_github_ssaltedfish_aria2_cpp_DownloadEventCallback_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::SessionConfig* ptr = (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3339,7 +3339,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_downloadE
     }
     jlong position = env->GetLongField(obj, JavaCPP_positionFID);
     ptr += position;
-    JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback* ptr0 = arg0 == NULL ? NULL : (JavaCPP_com_zsaltedfish_aria2_cpp_DownloadEventCallback*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback* ptr0 = arg0 == NULL ? NULL : (JavaCPP_io_github_ssaltedfish_aria2_cpp_DownloadEventCallback*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jlong position0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_positionFID);
     ptr0 += position0;
     jobject rarg = obj;
@@ -3347,7 +3347,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_SessionConfig_downloadE
     return rarg;
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_put(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPair_put(JNIEnv* env, jobject obj, jobject arg0) {
     std::pair<std::string,std::string>* ptr = (std::pair<std::string,std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3384,7 +3384,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_put(JNI
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_first__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPair_first__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     std::pair<std::string,std::string>* ptr = (std::pair<std::string,std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3403,7 +3403,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_first__
     ptr->first = (std::basic_string< char >&)adapter0;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_first__Ljava_lang_String_2(JNIEnv* env, jobject obj, jstring arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPair_first__Ljava_lang_String_2(JNIEnv* env, jobject obj, jstring arg0) {
     std::pair<std::string,std::string>* ptr = (std::pair<std::string,std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3420,7 +3420,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_first__
     JavaCPP_releaseStringBytes(env, arg0, ptr0);
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_first__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPair_first__(JNIEnv* env, jobject obj) {
     std::pair<std::string,std::string>* ptr = (std::pair<std::string,std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3443,7 +3443,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_first__
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_second__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPair_second__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     std::pair<std::string,std::string>* ptr = (std::pair<std::string,std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3462,7 +3462,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_second_
     ptr->second = (std::basic_string< char >&)adapter0;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_second__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPair_second__(JNIEnv* env, jobject obj) {
     std::pair<std::string,std::string>* ptr = (std::pair<std::string,std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3485,7 +3485,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_second_
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_second__Ljava_lang_String_2(JNIEnv* env, jobject obj, jstring arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPair_second__Ljava_lang_String_2(JNIEnv* env, jobject obj, jstring arg0) {
     std::pair<std::string,std::string>* ptr = (std::pair<std::string,std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3502,12 +3502,12 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_second_
     JavaCPP_releaseStringBytes(env, arg0, ptr0);
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_allocate(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPair_allocate(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         std::pair<std::string,std::string>* rptr = new std::pair<std::string,std::string>();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_StringStingPair_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringStingPair_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3517,7 +3517,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPair_allocate(J
     }
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_put(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_put(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3554,7 +3554,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_p
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_size(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_size(JNIEnv* env, jobject obj) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3576,7 +3576,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_siz
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_first__JLorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_first__JLorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3604,7 +3604,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_f
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_first__JLjava_lang_String_2(JNIEnv* env, jobject obj, jlong arg0, jstring arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_first__JLjava_lang_String_2(JNIEnv* env, jobject obj, jlong arg0, jstring arg1) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3630,7 +3630,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_f
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_first__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_first__J(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3662,7 +3662,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_f
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_second__JLjava_lang_String_2(JNIEnv* env, jobject obj, jlong arg0, jstring arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_second__JLjava_lang_String_2(JNIEnv* env, jobject obj, jlong arg0, jstring arg1) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3688,7 +3688,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_s
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_second__JLorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_second__JLorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3716,7 +3716,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_s
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_second__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_second__J(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3748,7 +3748,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_s
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<std::pair<std::string,std::string> >* ptr = (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3767,12 +3767,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_resi
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_allocate__(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_allocate__(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         std::vector<std::pair<std::string,std::string> >* rptr = new std::vector<std::pair<std::string,std::string> >();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_StringStingPairVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3781,12 +3781,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_allo
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         std::vector<std::pair<std::string,std::string> >* rptr = new std::vector<std::pair<std::string,std::string> >((size_t)arg0);
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_StringStingPairVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -3796,7 +3796,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringStingPairVector_allo
     }
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_00024Iterator_get(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_00024Iterator_get(JNIEnv* env, jobject obj) {
     std::vector<std::string>::iterator* ptr = (std::vector<std::string>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3828,7 +3828,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_00024Itera
     }
     return rarg;
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<std::string>::iterator* ptr = (std::vector<std::string>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3857,7 +3857,7 @@ JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_00024Iter
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
     std::vector<std::string>::iterator* ptr = (std::vector<std::string>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3888,7 +3888,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_00024Itera
     return rarg;
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_get(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_get(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3920,7 +3920,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_get(JNIEnv
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_put__JLorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_put__JLorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3948,7 +3948,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_put__JLorg
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_put__JLjava_lang_String_2(JNIEnv* env, jobject obj, jlong arg0, jstring arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_put__JLjava_lang_String_2(JNIEnv* env, jobject obj, jlong arg0, jstring arg1) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -3974,7 +3974,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_put__JLjav
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_put__Lcom_zsaltedfish_aria2_cpp_StringVector_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_put__Lio_github_ssaltedfish_aria2_cpp_StringVector_2(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4011,7 +4011,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_put__Lcom_
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_begin(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_begin(JNIEnv* env, jobject obj) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4026,7 +4026,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_begin(JNIE
         rptr = new std::vector<std::string>::iterator(ptr->begin());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 26);
             if (rarg != NULL) {
@@ -4042,7 +4042,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_begin(JNIE
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_end(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_end(JNIEnv* env, jobject obj) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4057,7 +4057,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_end(JNIEnv
         rptr = new std::vector<std::string>::iterator(ptr->end());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 26);
             if (rarg != NULL) {
@@ -4073,7 +4073,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_end(JNIEnv
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_size(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_size(JNIEnv* env, jobject obj) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4095,7 +4095,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_size(JNIEnv*
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4117,7 +4117,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_erase(JNIE
         rptr = new std::vector<std::string>::iterator(ptr->erase(*ptr0));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 26);
             if (rarg != NULL) {
@@ -4133,7 +4133,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_erase(JNIE
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_insert(JNIEnv* env, jobject obj, jobject arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_insert(JNIEnv* env, jobject obj, jobject arg0, jobject arg1) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4162,7 +4162,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_insert(JNI
         rptr = new std::vector<std::string>::iterator(ptr->insert(*ptr0, (std::basic_string< char >&)adapter1));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 26);
             if (rarg != NULL) {
@@ -4186,7 +4186,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_insert(JNI
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<std::string>* ptr = (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4205,12 +4205,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_resize(JNIEnv
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         std::vector<std::string>* rptr = new std::vector<std::string>((size_t)arg0);
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_StringVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -4219,12 +4219,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_allocate__J(J
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_allocate__(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVector_allocate__(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         std::vector<std::string>* rptr = new std::vector<std::string>();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_StringVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -4234,7 +4234,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVector_allocate__(JN
     }
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_00024Iterator_get(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_00024Iterator_get(JNIEnv* env, jobject obj) {
     std::vector<std::vector<std::string> >::iterator* ptr = (std::vector<std::vector<std::string> >::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4262,7 +4262,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_0002
     }
     return rarg;
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<std::vector<std::string> >::iterator* ptr = (std::vector<std::vector<std::string> >::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4291,7 +4291,7 @@ JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_000
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
     std::vector<std::vector<std::string> >::iterator* ptr = (std::vector<std::vector<std::string> >::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4322,7 +4322,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_0002
     return rarg;
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_get(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_get(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4350,7 +4350,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_get(
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_put__JLcom_zsaltedfish_aria2_cpp_StringVector_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_put__JLio_github_ssaltedfish_aria2_cpp_StringVector_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4378,7 +4378,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_put_
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_put__Lcom_zsaltedfish_aria2_cpp_StringVectorVector_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_put__Lio_github_ssaltedfish_aria2_cpp_StringVectorVector_2(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4415,7 +4415,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_put_
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_begin(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_begin(JNIEnv* env, jobject obj) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4430,7 +4430,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_begi
         rptr = new std::vector<std::vector<std::string> >::iterator(ptr->begin());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 28);
             if (rarg != NULL) {
@@ -4446,7 +4446,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_begi
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_end(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_end(JNIEnv* env, jobject obj) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4461,7 +4461,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_end(
         rptr = new std::vector<std::vector<std::string> >::iterator(ptr->end());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 28);
             if (rarg != NULL) {
@@ -4477,7 +4477,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_end(
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_size(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_size(JNIEnv* env, jobject obj) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4499,7 +4499,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_size(J
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4521,7 +4521,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_eras
         rptr = new std::vector<std::vector<std::string> >::iterator(ptr->erase(*ptr0));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 28);
             if (rarg != NULL) {
@@ -4537,7 +4537,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_eras
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_insert(JNIEnv* env, jobject obj, jobject arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_insert(JNIEnv* env, jobject obj, jobject arg0, jobject arg1) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4566,7 +4566,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_inse
         rptr = new std::vector<std::vector<std::string> >::iterator(ptr->insert(*ptr0, *ptr1));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVectorVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 28);
             if (rarg != NULL) {
@@ -4582,7 +4582,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_inse
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<std::vector<std::string> >* ptr = (std::vector<std::vector<std::string> >*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4601,12 +4601,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_resize(
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_allocate__(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_allocate__(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         std::vector<std::vector<std::string> >* rptr = new std::vector<std::vector<std::string> >();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_StringVectorVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVectorVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -4615,12 +4615,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_allocat
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_StringVectorVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         std::vector<std::vector<std::string> >* rptr = new std::vector<std::vector<std::string> >((size_t)arg0);
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_StringVectorVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringVectorVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -4630,7 +4630,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_StringVectorVector_allocat
     }
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_status__I(JNIEnv* env, jobject obj, jint arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriData_status__I(JNIEnv* env, jobject obj, jint arg0) {
     aria2::UriData* ptr = (aria2::UriData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4642,7 +4642,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_status__I(JNIEn
     ptr->status = (aria2::UriStatus)arg0;
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_status__(JNIEnv* env, jobject obj) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriData_status__(JNIEnv* env, jobject obj) {
     aria2::UriData* ptr = (aria2::UriData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4655,7 +4655,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_status__(JNIEnv* e
     rarg = (jint)rval;
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_uri__(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriData_uri__(JNIEnv* env, jobject obj) {
     aria2::UriData* ptr = (aria2::UriData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4678,7 +4678,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_uri__(JNIEnv* e
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_uri__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriData_uri__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jobject obj, jobject arg0) {
     aria2::UriData* ptr = (aria2::UriData*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4697,12 +4697,12 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_uri__Lorg_byted
     ptr->uri = (std::basic_string< char >&)adapter0;
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_allocate(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriData_allocate(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         aria2::UriData* rptr = new aria2::UriData();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_UriData_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_UriData_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -4711,12 +4711,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_allocate(JNIEnv* e
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriData_allocateArray(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         aria2::UriData* rptr = new aria2::UriData[arg0];
         jlong rcapacity = arg0;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_UriData_deallocateArray);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_UriData_deallocateArray);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -4726,7 +4726,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriData_allocateArray(JNIE
     }
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iterator_get(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_00024Iterator_get(JNIEnv* env, jobject obj) {
     std::vector<UriData>::iterator* ptr = (std::vector<UriData>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4754,7 +4754,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iter
     }
     return rarg;
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_00024Iterator_equals(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<UriData>::iterator* ptr = (std::vector<UriData>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4783,7 +4783,7 @@ JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_00024Ite
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_00024Iterator_increment(JNIEnv* env, jobject obj) {
     std::vector<UriData>::iterator* ptr = (std::vector<UriData>::iterator*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4814,7 +4814,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iter
     return rarg;
 }
 
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_get(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_get(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4842,7 +4842,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_get(JNIEn
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_put__JLcom_zsaltedfish_aria2_cpp_UriData_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_put__JLio_github_ssaltedfish_aria2_cpp_UriData_2(JNIEnv* env, jobject obj, jlong arg0, jobject arg1) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4870,7 +4870,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_put__JLco
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_put__Lcom_zsaltedfish_aria2_cpp_UriDataVector_2(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_put__Lio_github_ssaltedfish_aria2_cpp_UriDataVector_2(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4907,7 +4907,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_put__Lcom
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_begin(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_begin(JNIEnv* env, jobject obj) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4922,7 +4922,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_begin(JNI
         rptr = new std::vector<UriData>::iterator(ptr->begin());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 29);
             if (rarg != NULL) {
@@ -4938,7 +4938,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_begin(JNI
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_end(JNIEnv* env, jobject obj) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_end(JNIEnv* env, jobject obj) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4953,7 +4953,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_end(JNIEn
         rptr = new std::vector<UriData>::iterator(ptr->end());
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 29);
             if (rarg != NULL) {
@@ -4969,7 +4969,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_end(JNIEn
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_size(JNIEnv* env, jobject obj) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_size(JNIEnv* env, jobject obj) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -4991,7 +4991,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_size(JNIEnv
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_erase(JNIEnv* env, jobject obj, jobject arg0) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -5013,7 +5013,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_erase(JNI
         rptr = new std::vector<UriData>::iterator(ptr->erase(*ptr0));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 29);
             if (rarg != NULL) {
@@ -5029,7 +5029,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_erase(JNI
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_insert(JNIEnv* env, jobject obj, jobject arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_insert(JNIEnv* env, jobject obj, jobject arg0, jobject arg1) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -5058,7 +5058,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_insert(JN
         rptr = new std::vector<UriData>::iterator(ptr->insert(*ptr0, *ptr1));
         jlong rcapacity = 1;
         void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_UriDataVector_00024Iterator_deallocate;
         if (rptr != NULL) {
             rarg = JavaCPP_createPointer(env, 29);
             if (rarg != NULL) {
@@ -5074,7 +5074,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_insert(JN
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_resize(JNIEnv* env, jobject obj, jlong arg0) {
     std::vector<UriData>* ptr = (std::vector<UriData>*)jlong_to_ptr(env->GetLongField(obj, JavaCPP_addressFID));
     if (ptr == NULL) {
         env->ThrowNew(JavaCPP_getClass(env, 7), "This pointer address is NULL.");
@@ -5093,12 +5093,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_resize(JNIEn
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_allocate__(JNIEnv* env, jobject obj) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_allocate__(JNIEnv* env, jobject obj) {
     jthrowable exc = NULL;
     try {
         std::vector<UriData>* rptr = new std::vector<UriData>();
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_UriDataVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_UriDataVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -5107,12 +5107,12 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_allocate__(J
         env->Throw(exc);
     }
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_cpp_UriDataVector_allocate__J(JNIEnv* env, jobject obj, jlong arg0) {
     jthrowable exc = NULL;
     try {
         std::vector<UriData>* rptr = new std::vector<UriData>((size_t)arg0);
         jlong rcapacity = 1;
-        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_com_zsaltedfish_aria2_cpp_UriDataVector_deallocate);
+        JavaCPP_initPointer(env, obj, rptr, rcapacity, rptr, &JavaCPP_io_github_ssaltedfish_aria2_cpp_UriDataVector_deallocate);
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -5123,7 +5123,7 @@ JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_cpp_UriDataVector_allocate__J(
 }
 
 
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_run(JNIEnv* env, jclass cls, jobject arg0, jint arg1) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_run(JNIEnv* env, jclass cls, jobject arg0, jint arg1) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jint rarg = 0;
     jthrowable exc = NULL;
@@ -5139,7 +5139,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_run(JNIEnv* env, 
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_shutdown__Lcom_zsaltedfish_aria2_cpp_Session_2(JNIEnv* env, jclass cls, jobject arg0) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_shutdown__Lio_github_ssaltedfish_aria2_cpp_Session_2(JNIEnv* env, jclass cls, jobject arg0) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jint rarg = 0;
     jthrowable exc = NULL;
@@ -5155,7 +5155,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_shutdown__Lcom_zs
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_shutdown__Lcom_zsaltedfish_aria2_cpp_Session_2Z(JNIEnv* env, jclass cls, jobject arg0, jboolean arg1) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_shutdown__Lio_github_ssaltedfish_aria2_cpp_Session_2Z(JNIEnv* env, jclass cls, jobject arg0, jboolean arg1) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jint rarg = 0;
     jthrowable exc = NULL;
@@ -5171,7 +5171,7 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_shutdown__Lcom_zs
     }
     return rarg;
 }
-JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_global_Aria2_isNull(JNIEnv* env, jclass cls, jlong arg0) {
+JNIEXPORT jboolean JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_isNull(JNIEnv* env, jclass cls, jlong arg0) {
     jboolean rarg = 0;
     jthrowable exc = NULL;
     try {
@@ -5186,19 +5186,11 @@ JNIEXPORT jboolean JNICALL Java_com_zsaltedfish_aria2_global_Aria2_isNull(JNIEnv
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_changeOption(JNIEnv* env, jclass cls, jobject arg0, jlong arg1, jobject arg2) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    std::vector<std::pair<std::string,std::string> >* ptr2 = arg2 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    if (ptr2 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
-        return 0;
-    }
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_libraryDeinit(JNIEnv* env, jclass cls) {
     jint rarg = 0;
     jthrowable exc = NULL;
     try {
-        int rval = aria2::changeOption(ptr0, (aria2::A2Gid)arg1, *(const aria2::KeyVals*)ptr2);
+        int rval = aria2::libraryDeinit();
         rarg = (jint)rval;
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
@@ -5209,1898 +5201,18 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_changeOption(JNIE
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_libraryInit(JNIEnv* env, jclass cls) {
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::libraryInit();
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3, jobject arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jobject arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jobject arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3, jobject arg4, jint arg5) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jobject arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jobject arg4, jint arg5) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jobject arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jobject arg4, jint arg5) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jobject arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jobject arg4, jint arg5) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jobject arg4, jint arg5) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addTorrent__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jobject arg4, jint arg5) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
-    if (ptr4 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
-        return 0;
-    }
-    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
-    ptr4 += position4;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    jlong size1 = arg1 == NULL ? 0 : env->GetArrayLength(arg1);
-    void* owner1 = (void*)ptr1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
-    }
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlong size1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferLimitFID);
-    void* owner1 = (void*)ptr1;
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    size1 -= position1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
-    }
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    jlong size1 = arg1 == NULL ? 0 : env->GetArrayLength(arg1);
-    void* owner1 = (void*)ptr1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
-    }
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlong size1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferLimitFID);
-    void* owner1 = (void*)ptr1;
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    size1 -= position1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
-    }
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
-    void* owner1 = JavaCPP_getPointerOwner(env, arg1);
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    size1 -= position1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    jlong rsize1 = (jlong)adapter1.size;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        JavaCPP_initPointer(env, arg1, rptr1, rsize1, rowner1, &VectorAdapter< aria2::A2Gid >::deallocate);
-    } else {
-        env->SetLongField(arg1, JavaCPP_limitFID, rsize1 + position1);
-    }
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
-    void* owner1 = JavaCPP_getPointerOwner(env, arg1);
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    size1 -= position1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    jlong rsize1 = (jlong)adapter1.size;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        JavaCPP_initPointer(env, arg1, rptr1, rsize1, rowner1, &VectorAdapter< aria2::A2Gid >::deallocate);
-    } else {
-        env->SetLongField(arg1, JavaCPP_limitFID, rsize1 + position1);
-    }
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    jlong size1 = arg1 == NULL ? 0 : env->GetArrayLength(arg1);
-    void* owner1 = (void*)ptr1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
-    }
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    jlong size1 = arg1 == NULL ? 0 : env->GetArrayLength(arg1);
-    void* owner1 = (void*)ptr1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
-    }
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlong size1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferLimitFID);
-    void* owner1 = (void*)ptr1;
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    size1 -= position1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
-    }
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
-    void* owner1 = JavaCPP_getPointerOwner(env, arg1);
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    size1 -= position1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    jlong rsize1 = (jlong)adapter1.size;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        JavaCPP_initPointer(env, arg1, rptr1, rsize1, rowner1, &VectorAdapter< aria2::A2Gid >::deallocate);
-    } else {
-        env->SetLongField(arg1, JavaCPP_limitFID, rsize1 + position1);
-    }
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
-    void* owner1 = JavaCPP_getPointerOwner(env, arg1);
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    size1 -= position1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
-    jlong size2 = 0;
-    void* owner2 = (void*)ptr2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    jlong rsize1 = (jlong)adapter1.size;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        JavaCPP_initPointer(env, arg1, rptr1, rsize1, rowner1, &VectorAdapter< aria2::A2Gid >::deallocate);
-    } else {
-        env->SetLongField(arg1, JavaCPP_limitFID, rsize1 + position1);
-    }
-    JavaCPP_releaseStringBytes(env, arg2, ptr2);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addMetalink__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlong size1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferLimitFID);
-    void* owner1 = (void*)ptr1;
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    size1 -= position1;
-    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
-    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
-    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    size2 -= position2;
-    StringAdapter< char > adapter2(ptr2, size2, owner2);
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
-    void* rowner1 = adapter1.owner;
-    if (rptr1 != (aria2::A2Gid*)ptr1) {
-        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
-    }
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    signed char* rptr2 = adapter2;
-    jlong rsize2 = (jlong)adapter2.size;
-    void* rowner2 = adapter2.owner;
-    if (rptr2 != ptr2) {
-        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
-    } else {
-        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
-    }
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_sessionFinal(JNIEnv* env, jclass cls, jobject arg0) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::sessionFinal(ptr0);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addUri__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    if (ptr2 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
-        return 0;
-    }
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addUri__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    if (ptr2 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
-        return 0;
-    }
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addUri__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    if (ptr2 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
-        return 0;
-    }
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addUri__Lcom_zsaltedfish_aria2_cpp_Session_2_3JLcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
-    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    if (ptr2 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
-        return 0;
-    }
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addUri__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    if (ptr2 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
-        return 0;
-    }
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3, arg4);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_addUri__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lcom_zsaltedfish_aria2_cpp_StringVector_2Lcom_zsaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
-    jlongArray arr1 = NULL;
-    jlong offset1 = 0;
-    if (arg1 != NULL && ptr1 == NULL) {
-        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
-        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
-        if (env->ExceptionOccurred() != NULL) {
-            return 0;
-        } else {
-            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
-        }
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
-    ptr1 += position1;
-    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
-    if (ptr2 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
-        return 0;
-    }
-    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
-    ptr2 += position2;
-    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
-    if (ptr3 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
-        return 0;
-    }
-    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
-    ptr3 += position3;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getActiveDownload(JNIEnv* env, jclass cls, jobject arg0) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_getGlobalStat(JNIEnv* env, jclass cls, jobject arg0) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jobject rarg = NULL;
-    aria2::A2Gid* rptr;
+    aria2::GlobalStat* rptr;
     jthrowable exc = NULL;
     try {
-        VectorAdapter< aria2::A2Gid > radapter(aria2::getActiveDownload(ptr0));
-        rptr = radapter;
-        jlong rcapacity = (jlong)radapter.size;
-        void* rowner = radapter.owner;
-        void (*deallocator)(void*) = rowner != NULL ? &VectorAdapter< aria2::A2Gid >::deallocate : 0;
+        rptr = new aria2::GlobalStat(aria2::getGlobalStat(ptr0));
+        jlong rcapacity = 1;
+        void* rowner = (void*)rptr;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_GlobalStat_deallocate;
         if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 19);
+            rarg = JavaCPP_createPointer(env, 23);
             if (rarg != NULL) {
                 JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
             }
@@ -7114,12 +5226,604 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getActiveDownl
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_removeDownload__Lcom_zsaltedfish_aria2_cpp_Session_2JZ(JNIEnv* env, jclass cls, jobject arg0, jlong arg1, jboolean arg2) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    jlong size1 = arg1 == NULL ? 0 : env->GetArrayLength(arg1);
+    void* owner1 = (void*)ptr1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
+    }
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    jlong size1 = arg1 == NULL ? 0 : env->GetArrayLength(arg1);
+    void* owner1 = (void*)ptr1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
+    }
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
+    void* owner1 = JavaCPP_getPointerOwner(env, arg1);
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    size1 -= position1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    jlong rsize1 = (jlong)adapter1.size;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        JavaCPP_initPointer(env, arg1, rptr1, rsize1, rowner1, &VectorAdapter< aria2::A2Gid >::deallocate);
+    } else {
+        env->SetLongField(arg1, JavaCPP_limitFID, rsize1 + position1);
+    }
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlong size1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferLimitFID);
+    void* owner1 = (void*)ptr1;
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    size1 -= position1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
+    }
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlong size1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferLimitFID);
+    void* owner1 = (void*)ptr1;
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    size1 -= position1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
+    }
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    jlong size1 = arg1 == NULL ? 0 : env->GetArrayLength(arg1);
+    void* owner1 = (void*)ptr1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
+    }
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    jlong size1 = arg1 == NULL ? 0 : env->GetArrayLength(arg1);
+    void* owner1 = (void*)ptr1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
+    }
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlong size1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferLimitFID);
+    void* owner1 = (void*)ptr1;
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    size1 -= position1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
+    }
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlong size1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferLimitFID);
+    void* owner1 = (void*)ptr1;
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    size1 -= position1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        VectorAdapter< aria2::A2Gid >::deallocate(rowner1);
+    }
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
+    void* owner1 = JavaCPP_getPointerOwner(env, arg1);
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    size1 -= position1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    jlong rsize1 = (jlong)adapter1.size;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        JavaCPP_initPointer(env, arg1, rptr1, rsize1, rowner1, &VectorAdapter< aria2::A2Gid >::deallocate);
+    } else {
+        env->SetLongField(arg1, JavaCPP_limitFID, rsize1 + position1);
+    }
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
+    void* owner1 = JavaCPP_getPointerOwner(env, arg1);
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    size1 -= position1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    jlong rsize1 = (jlong)adapter1.size;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        JavaCPP_initPointer(env, arg1, rptr1, rsize1, rowner1, &VectorAdapter< aria2::A2Gid >::deallocate);
+    } else {
+        env->SetLongField(arg1, JavaCPP_limitFID, rsize1 + position1);
+    }
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addMetalink__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
+    void* owner1 = JavaCPP_getPointerOwner(env, arg1);
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    size1 -= position1;
+    VectorAdapter< aria2::A2Gid > adapter1((aria2::A2Gid*)ptr1, size1, owner1);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addMetalink(ptr0, adapter1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    aria2::A2Gid* rptr1 = (aria2::A2Gid*)adapter1;
+    jlong rsize1 = (jlong)adapter1.size;
+    void* rowner1 = adapter1.owner;
+    if (rptr1 != (aria2::A2Gid*)ptr1) {
+        JavaCPP_initPointer(env, arg1, rptr1, rsize1, rowner1, &VectorAdapter< aria2::A2Gid >::deallocate);
+    } else {
+        env->SetLongField(arg1, JavaCPP_limitFID, rsize1 + position1);
+    }
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_pauseDownload__Lio_github_ssaltedfish_aria2_cpp_Session_2J(JNIEnv* env, jclass cls, jobject arg0, jlong arg1) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jint rarg = 0;
     jthrowable exc = NULL;
     try {
-        int rval = aria2::removeDownload(ptr0, (aria2::A2Gid)arg1, (bool)arg2);
+        int rval = aria2::pauseDownload(ptr0, (aria2::A2Gid)arg1);
         rarg = (jint)rval;
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
@@ -7130,12 +5834,12 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_removeDownload__L
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_removeDownload__Lcom_zsaltedfish_aria2_cpp_Session_2J(JNIEnv* env, jclass cls, jobject arg0, jlong arg1) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_pauseDownload__Lio_github_ssaltedfish_aria2_cpp_Session_2JZ(JNIEnv* env, jclass cls, jobject arg0, jlong arg1, jboolean arg2) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jint rarg = 0;
     jthrowable exc = NULL;
     try {
-        int rval = aria2::removeDownload(ptr0, (aria2::A2Gid)arg1);
+        int rval = aria2::pauseDownload(ptr0, (aria2::A2Gid)arg1, (bool)arg2);
         rarg = (jint)rval;
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
@@ -7146,15 +5850,28 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_removeDownload__L
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getDownloadHandle(JNIEnv* env, jclass cls, jobject arg0, jlong arg1) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_sessionNew(JNIEnv* env, jclass cls, jobject arg0, jobject arg1) {
+    std::vector<std::pair<std::string,std::string> >* ptr0 = arg0 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    if (ptr0 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 0 is NULL.");
+        return 0;
+    }
+    jlong position0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_positionFID);
+    ptr0 += position0;
+    aria2::SessionConfig* ptr1 = arg1 == NULL ? NULL : (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    if (ptr1 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 1 is NULL.");
+        return 0;
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
     jobject rarg = NULL;
-    aria2::DownloadHandle* rptr;
+    aria2::Session* rptr;
     jthrowable exc = NULL;
     try {
-        rptr = aria2::getDownloadHandle(ptr0, (aria2::A2Gid)arg1);
+        rptr = aria2::sessionNew(*(const aria2::KeyVals*)ptr0, *(const aria2::SessionConfig*)ptr1);
         if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 31);
+            rarg = JavaCPP_createPointer(env, 14);
             if (rarg != NULL) {
                 env->SetLongField(rarg, JavaCPP_addressFID, ptr_to_jlong(rptr));
             }
@@ -7168,7 +5885,1304 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getDownloadHan
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_gidToHex(JNIEnv* env, jclass cls, jlong arg0) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addUri__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    if (ptr2 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
+        return 0;
+    }
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addUri__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    if (ptr2 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
+        return 0;
+    }
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addUri__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    if (ptr2 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
+        return 0;
+    }
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addUri__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    if (ptr2 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
+        return 0;
+    }
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addUri__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    if (ptr2 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
+        return 0;
+    }
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addUri__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    std::vector<std::string>* ptr2 = arg2 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    if (ptr2 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
+        return 0;
+    }
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addUri(ptr0, (aria2::A2Gid*)ptr1, *(const std::vector<std::string>*)ptr2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_unpauseDownload(JNIEnv* env, jclass cls, jobject arg0, jlong arg1) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::unpauseDownload(ptr0, (aria2::A2Gid)arg1);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_getGlobalOptions(JNIEnv* env, jclass cls, jobject arg0) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jobject rarg = NULL;
+    aria2::KeyVals* rptr;
+    jthrowable exc = NULL;
+    try {
+        rptr = (aria2::KeyVals*)new aria2::KeyVals(aria2::getGlobalOptions(ptr0));
+        jlong rcapacity = 1;
+        void* rowner = (void*)rptr;
+        void (*deallocator)(void*) = &JavaCPP_io_github_ssaltedfish_aria2_cpp_StringStingPairVector_deallocate;
+        if (rptr != NULL) {
+            rarg = JavaCPP_createPointer(env, 18);
+            if (rarg != NULL) {
+                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
+            }
+        }
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jobject arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jobject arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jobject arg4, jint arg5) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jobject arg2, jobject arg3, jobject arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jobject arg4, jint arg5) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Ljava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jstring arg2, jobject arg3, jobject arg4, jint arg5) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jobject arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jobject arg4, jint arg5) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jint arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3, arg4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3, jobject arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_LongPointer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::pair<std::string,std::string> >* ptr3 = arg3 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const aria2::KeyVals*)ptr3);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jobject arg4) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_nio_LongBuffer_2Lorg_bytedeco_javacpp_BytePointer_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jobject arg1, jobject arg2, jobject arg3, jobject arg4, jint arg5) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : (jlong*)env->GetDirectBufferAddress(arg1);
+    jlongArray arr1 = NULL;
+    jlong offset1 = 0;
+    if (arg1 != NULL && ptr1 == NULL) {
+        arr1 = (jlongArray)env->CallObjectMethod(arg1, JavaCPP_arrayMID);
+        offset1 = env->CallIntMethod(arg1, JavaCPP_arrayOffsetMID);
+        if (env->ExceptionOccurred() != NULL) {
+            return 0;
+        } else {
+            ptr1 = arr1 == NULL ? NULL : env->GetLongArrayElements(arr1, NULL) + offset1;
+        }
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetIntField(arg1, JavaCPP_bufferPositionFID);
+    ptr1 += position1;
+    signed char* ptr2 = arg2 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    jlong size2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_limitFID);
+    void* owner2 = JavaCPP_getPointerOwner(env, arg2);
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    size2 -= position2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arr1 != NULL) env->ReleaseLongArrayElements(arr1, (jlong*)(ptr1 - position1), 0);
+    signed char* rptr2 = adapter2;
+    jlong rsize2 = (jlong)adapter2.size;
+    void* rowner2 = adapter2.owner;
+    if (rptr2 != ptr2) {
+        JavaCPP_initPointer(env, arg2, rptr2, rsize2, rowner2, &StringAdapter< char >::deallocate);
+    } else {
+        env->SetLongField(arg2, JavaCPP_limitFID, rsize2 + position2);
+    }
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_addTorrent__Lio_github_ssaltedfish_aria2_cpp_Session_2_3JLjava_lang_String_2Lio_github_ssaltedfish_aria2_cpp_StringVector_2Lio_github_ssaltedfish_aria2_cpp_StringStingPairVector_2I(JNIEnv* env, jclass cls, jobject arg0, jlongArray arg1, jstring arg2, jobject arg3, jobject arg4, jint arg5) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jlong* ptr1 = arg1 == NULL ? NULL : env->GetLongArrayElements(arg1, NULL);
+    const char* ptr2 = JavaCPP_getStringBytes(env, arg2);
+    jlong size2 = 0;
+    void* owner2 = (void*)ptr2;
+    StringAdapter< char > adapter2(ptr2, size2, owner2);
+    std::vector<std::string>* ptr3 = arg3 == NULL ? NULL : (std::vector<std::string>*)jlong_to_ptr(env->GetLongField(arg3, JavaCPP_addressFID));
+    if (ptr3 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 3 is NULL.");
+        return 0;
+    }
+    jlong position3 = arg3 == NULL ? 0 : env->GetLongField(arg3, JavaCPP_positionFID);
+    ptr3 += position3;
+    std::vector<std::pair<std::string,std::string> >* ptr4 = arg4 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg4, JavaCPP_addressFID));
+    if (ptr4 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 4 is NULL.");
+        return 0;
+    }
+    jlong position4 = arg4 == NULL ? 0 : env->GetLongField(arg4, JavaCPP_positionFID);
+    ptr4 += position4;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::addTorrent(ptr0, (aria2::A2Gid*)ptr1, (std::basic_string< char >&)adapter2, *(const std::vector<std::string>*)ptr3, *(const aria2::KeyVals*)ptr4, arg5);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (arg1 != NULL) env->ReleaseLongArrayElements(arg1, (jlong*)ptr1, 0);
+    JavaCPP_releaseStringBytes(env, arg2, ptr2);
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_gidToHex(JNIEnv* env, jclass cls, jlong arg0) {
     jobject rarg = NULL;
     signed char* rptr;
     jthrowable exc = NULL;
@@ -7193,103 +7207,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_gidToHex(JNIEn
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_changeGlobalOption(JNIEnv* env, jclass cls, jobject arg0, jobject arg1) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    std::vector<std::pair<std::string,std::string> >* ptr1 = arg1 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    if (ptr1 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 1 is NULL.");
-        return 0;
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::changeGlobalOption(ptr0, *(const aria2::KeyVals*)ptr1);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_unpauseDownload(JNIEnv* env, jclass cls, jobject arg0, jlong arg1) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::unpauseDownload(ptr0, (aria2::A2Gid)arg1);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getGlobalOptions(JNIEnv* env, jclass cls, jobject arg0) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jobject rarg = NULL;
-    aria2::KeyVals* rptr;
-    jthrowable exc = NULL;
-    try {
-        rptr = (aria2::KeyVals*)new aria2::KeyVals(aria2::getGlobalOptions(ptr0));
-        jlong rcapacity = 1;
-        void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_StringStingPairVector_deallocate;
-        if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 18);
-            if (rarg != NULL) {
-                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
-            }
-        }
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_pauseDownload__Lcom_zsaltedfish_aria2_cpp_Session_2JZ(JNIEnv* env, jclass cls, jobject arg0, jlong arg1, jboolean arg2) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::pauseDownload(ptr0, (aria2::A2Gid)arg1, (bool)arg2);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_pauseDownload__Lcom_zsaltedfish_aria2_cpp_Session_2J(JNIEnv* env, jclass cls, jobject arg0, jlong arg1) {
-    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::pauseDownload(ptr0, (aria2::A2Gid)arg1);
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getGlobalOption__Lcom_zsaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1) {
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_getGlobalOption__Lio_github_ssaltedfish_aria2_cpp_Session_2Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jclass cls, jobject arg0, jobject arg1) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     signed char* ptr1 = arg1 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
     jlong size1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_limitFID);
@@ -7330,7 +7248,7 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getGlobalOptio
     }
     return rarg;
 }
-JNIEXPORT jstring JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getGlobalOption__Lcom_zsaltedfish_aria2_cpp_Session_2Ljava_lang_String_2(JNIEnv* env, jclass cls, jobject arg0, jstring arg1) {
+JNIEXPORT jstring JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_getGlobalOption__Lio_github_ssaltedfish_aria2_cpp_Session_2Ljava_lang_String_2(JNIEnv* env, jclass cls, jobject arg0, jstring arg1) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     const char* ptr1 = JavaCPP_getStringBytes(env, arg1);
     jlong size1 = 0;
@@ -7355,22 +7273,13 @@ JNIEXPORT jstring JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getGlobalOptio
     }
     return rarg;
 }
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getGlobalStat(JNIEnv* env, jclass cls, jobject arg0) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_removeDownload__Lio_github_ssaltedfish_aria2_cpp_Session_2J(JNIEnv* env, jclass cls, jobject arg0, jlong arg1) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    jobject rarg = NULL;
-    aria2::GlobalStat* rptr;
+    jint rarg = 0;
     jthrowable exc = NULL;
     try {
-        rptr = new aria2::GlobalStat(aria2::getGlobalStat(ptr0));
-        jlong rcapacity = 1;
-        void* rowner = (void*)rptr;
-        void (*deallocator)(void*) = &JavaCPP_com_zsaltedfish_aria2_cpp_GlobalStat_deallocate;
-        if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 23);
-            if (rarg != NULL) {
-                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
-            }
-        }
+        int rval = aria2::removeDownload(ptr0, (aria2::A2Gid)arg1);
+        rarg = (jint)rval;
     } catch (...) {
         exc = JavaCPP_handleException(env, 8);
     }
@@ -7380,7 +7289,23 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_getGlobalStat(
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_changePosition(JNIEnv* env, jclass cls, jobject arg0, jlong arg1, jint arg2, jint arg3) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_removeDownload__Lio_github_ssaltedfish_aria2_cpp_Session_2JZ(JNIEnv* env, jclass cls, jobject arg0, jlong arg1, jboolean arg2) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::removeDownload(ptr0, (aria2::A2Gid)arg1, (bool)arg2);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_changePosition(JNIEnv* env, jclass cls, jobject arg0, jlong arg1, jint arg2, jint arg3) {
     aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jint rarg = 0;
     jthrowable exc = NULL;
@@ -7396,7 +7321,71 @@ JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_changePosition(JN
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_global_Aria2_hexToGid__Ljava_lang_String_2(JNIEnv* env, jclass cls, jstring arg0) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_changeGlobalOption(JNIEnv* env, jclass cls, jobject arg0, jobject arg1) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    std::vector<std::pair<std::string,std::string> >* ptr1 = arg1 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
+    if (ptr1 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 1 is NULL.");
+        return 0;
+    }
+    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
+    ptr1 += position1;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::changeGlobalOption(ptr0, *(const aria2::KeyVals*)ptr1);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_libraryInit(JNIEnv* env, jclass cls) {
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::libraryInit();
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_getActiveDownload(JNIEnv* env, jclass cls, jobject arg0) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jobject rarg = NULL;
+    aria2::A2Gid* rptr;
+    jthrowable exc = NULL;
+    try {
+        VectorAdapter< aria2::A2Gid > radapter(aria2::getActiveDownload(ptr0));
+        rptr = radapter;
+        jlong rcapacity = (jlong)radapter.size;
+        void* rowner = radapter.owner;
+        void (*deallocator)(void*) = rowner != NULL ? &VectorAdapter< aria2::A2Gid >::deallocate : 0;
+        if (rptr != NULL) {
+            rarg = JavaCPP_createPointer(env, 19);
+            if (rarg != NULL) {
+                JavaCPP_initPointer(env, rarg, rptr, rcapacity, rowner, deallocator);
+            }
+        }
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_hexToGid__Ljava_lang_String_2(JNIEnv* env, jclass cls, jstring arg0) {
     const char* ptr0 = JavaCPP_getStringBytes(env, arg0);
     jlong size0 = 0;
     void* owner0 = (void*)ptr0;
@@ -7416,7 +7405,7 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_global_Aria2_hexToGid__Ljava_
     }
     return rarg;
 }
-JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_global_Aria2_hexToGid__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jclass cls, jobject arg0) {
+JNIEXPORT jlong JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_hexToGid__Lorg_bytedeco_javacpp_BytePointer_2(JNIEnv* env, jclass cls, jobject arg0) {
     signed char* ptr0 = arg0 == NULL ? NULL : (signed char*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jlong size0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_limitFID);
     void* owner0 = JavaCPP_getPointerOwner(env, arg0);
@@ -7446,43 +7435,15 @@ JNIEXPORT jlong JNICALL Java_com_zsaltedfish_aria2_global_Aria2_hexToGid__Lorg_b
     }
     return rarg;
 }
-JNIEXPORT jint JNICALL Java_com_zsaltedfish_aria2_global_Aria2_libraryDeinit(JNIEnv* env, jclass cls) {
-    jint rarg = 0;
-    jthrowable exc = NULL;
-    try {
-        int rval = aria2::libraryDeinit();
-        rarg = (jint)rval;
-    } catch (...) {
-        exc = JavaCPP_handleException(env, 8);
-    }
-
-    if (exc != NULL) {
-        env->Throw(exc);
-    }
-    return rarg;
-}
-JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_sessionNew(JNIEnv* env, jclass cls, jobject arg0, jobject arg1) {
-    std::vector<std::pair<std::string,std::string> >* ptr0 = arg0 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
-    if (ptr0 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 0 is NULL.");
-        return 0;
-    }
-    jlong position0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_positionFID);
-    ptr0 += position0;
-    aria2::SessionConfig* ptr1 = arg1 == NULL ? NULL : (aria2::SessionConfig*)jlong_to_ptr(env->GetLongField(arg1, JavaCPP_addressFID));
-    if (ptr1 == NULL) {
-        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 1 is NULL.");
-        return 0;
-    }
-    jlong position1 = arg1 == NULL ? 0 : env->GetLongField(arg1, JavaCPP_positionFID);
-    ptr1 += position1;
+JNIEXPORT jobject JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_getDownloadHandle(JNIEnv* env, jclass cls, jobject arg0, jlong arg1) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jobject rarg = NULL;
-    aria2::Session* rptr;
+    aria2::DownloadHandle* rptr;
     jthrowable exc = NULL;
     try {
-        rptr = aria2::sessionNew(*(const aria2::KeyVals*)ptr0, *(const aria2::SessionConfig*)ptr1);
+        rptr = aria2::getDownloadHandle(ptr0, (aria2::A2Gid)arg1);
         if (rptr != NULL) {
-            rarg = JavaCPP_createPointer(env, 14);
+            rarg = JavaCPP_createPointer(env, 31);
             if (rarg != NULL) {
                 env->SetLongField(rarg, JavaCPP_addressFID, ptr_to_jlong(rptr));
             }
@@ -7496,7 +7457,46 @@ JNIEXPORT jobject JNICALL Java_com_zsaltedfish_aria2_global_Aria2_sessionNew(JNI
     }
     return rarg;
 }
-JNIEXPORT void JNICALL Java_com_zsaltedfish_aria2_global_Aria2_deleteDownloadHandle(JNIEnv* env, jclass cls, jobject arg0) {
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_sessionFinal(JNIEnv* env, jclass cls, jobject arg0) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::sessionFinal(ptr0);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT jint JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_changeOption(JNIEnv* env, jclass cls, jobject arg0, jlong arg1, jobject arg2) {
+    aria2::Session* ptr0 = arg0 == NULL ? NULL : (aria2::Session*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
+    std::vector<std::pair<std::string,std::string> >* ptr2 = arg2 == NULL ? NULL : (std::vector<std::pair<std::string,std::string> >*)jlong_to_ptr(env->GetLongField(arg2, JavaCPP_addressFID));
+    if (ptr2 == NULL) {
+        env->ThrowNew(JavaCPP_getClass(env, 7), "Pointer address of argument 2 is NULL.");
+        return 0;
+    }
+    jlong position2 = arg2 == NULL ? 0 : env->GetLongField(arg2, JavaCPP_positionFID);
+    ptr2 += position2;
+    jint rarg = 0;
+    jthrowable exc = NULL;
+    try {
+        int rval = aria2::changeOption(ptr0, (aria2::A2Gid)arg1, *(const aria2::KeyVals*)ptr2);
+        rarg = (jint)rval;
+    } catch (...) {
+        exc = JavaCPP_handleException(env, 8);
+    }
+
+    if (exc != NULL) {
+        env->Throw(exc);
+    }
+    return rarg;
+}
+JNIEXPORT void JNICALL Java_io_github_ssaltedfish_aria2_global_Aria2_deleteDownloadHandle(JNIEnv* env, jclass cls, jobject arg0) {
     aria2::DownloadHandle* ptr0 = arg0 == NULL ? NULL : (aria2::DownloadHandle*)jlong_to_ptr(env->GetLongField(arg0, JavaCPP_addressFID));
     jlong position0 = arg0 == NULL ? 0 : env->GetLongField(arg0, JavaCPP_positionFID);
     ptr0 += position0;
