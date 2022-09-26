@@ -38,5 +38,6 @@ public class StringStingPair extends Pointer {
         second(secondValue);
         return this;
     }
+
 }
 

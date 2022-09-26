@@ -53,7 +53,7 @@ public class BtMetaInfoData extends Pointer {
   /**
    * File mode of the torrent.
    */
-  public native @Cast("aria2::BtFileMode") int mode(); public native BtMetaInfoData mode(int setter);
+  public native BtFileMode mode(); public native BtMetaInfoData mode(BtFileMode setter);
   /**
    * {@code }name{@code } in {@code }info{@code } dictionary. {@code }name.utf-8{@code } is used if
    * available.

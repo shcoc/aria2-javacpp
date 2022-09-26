@@ -6,7 +6,7 @@
 
     <groupId>io.github.ssaltedfish</groupId>
     <artifactId>aria2-javacpp</artifactId>
-    <version>0.1</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>aria2-javacpp</name>
@@ -36,9 +36,9 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <javacpp.cppbuild.skip>false
+        <javacpp.cppbuild.skip>true
         </javacpp.cppbuild.skip> <!-- To skip execution of cppbuild.sh: -Djavacpp.cppbuild.skip=true -->
-        <javacpp.parser.skip>false
+        <javacpp.parser.skip>true
         </javacpp.parser.skip>     <!-- To skip header file parsing phase: -Djavacpp.parser.skip=true  -->
         <javacpp.compiler.skip>false
         </javacpp.compiler.skip> <!-- To skip native compilation phase: -Djavacpp.compiler.skip=true -->
@@ -61,6 +61,12 @@
             <groupId>org.bytedeco</groupId>
             <artifactId>javacpp</artifactId>
             <version>1.5.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
     <build>

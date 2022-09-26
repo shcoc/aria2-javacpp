@@ -18,22 +18,82 @@ public class StringStingPairVector extends Pointer {
     public StringStingPairVector(BytePointer[] firstValue, BytePointer[] secondValue) { this(Math.min(firstValue.length, secondValue.length)); put(firstValue, secondValue); }
     public StringStingPairVector(String[] firstValue, String[] secondValue) { this(Math.min(firstValue.length, secondValue.length)); put(firstValue, secondValue); }
     public StringStingPairVector()       { allocate();  }
-    public StringStingPairVector(long n) { allocate(n); }
-    private native void allocate();
-    private native void allocate(@Cast("size_t") long n);
-    public native @Name("operator =") @ByRef StringStingPairVector put(@ByRef StringStingPairVector x);
 
-    public boolean empty() { return size() == 0; }
+    public StringStingPairVector(long n) {
+        allocate(n);
+    }
+
+    private native void allocate();
+
+    private native void allocate(@Cast("size_t") long n);
+
+    public native @Name("operator =")
+    @ByRef StringStingPairVector put(@ByRef StringStingPairVector x);
+
+    public native boolean empty();
+
     public native long size();
-    public void clear() { resize(0); }
+
+    public native void clear();
+
     public native void resize(@Cast("size_t") long n);
 
-    @Index(function = "at") public native @StdString BytePointer first(@Cast("size_t") long i); public native StringStingPairVector first(@Cast("size_t") long i, BytePointer first);
-    @Index(function = "at") public native @StdString BytePointer second(@Cast("size_t") long i);  public native StringStingPairVector second(@Cast("size_t") long i, BytePointer second);
-    @MemberSetter @Index(function = "at") public native StringStingPairVector first(@Cast("size_t") long i, @StdString String first);
-    @MemberSetter @Index(function = "at") public native StringStingPairVector second(@Cast("size_t") long i, @StdString String second);
+    @Index(function = "at")
+    public native @ByRef
+    @Cast("std::pair<std::string,std::string>* ") StringStingPair get(@Cast("size_t") long i);
 
-    public StringStingPairVector put(BytePointer[] firstValue, BytePointer[] secondValue) {
+    @Index(function = "at")
+    @Name("operator=")
+    public native @ByRef
+    @Cast("std::vector<std::pair<std::string,std::string> >* ") StringStingPairVector put(@Cast("size_t") long i, @ByRef @Cast("std::pair<std::string,std::string>*") StringStingPair v);
+
+    @Index(function = "at")
+    public native @StdString BytePointer first(@Cast("size_t") long i);
+
+    public native StringStingPairVector first(@Cast("size_t") long i, BytePointer first);
+
+    @Index(function = "at")
+    public native @StdString BytePointer second(@Cast("size_t") long i);
+
+    public native StringStingPairVector second(@Cast("size_t") long i, BytePointer second);
+
+    @MemberSetter
+    @Index(function = "at")
+    public native StringStingPairVector first(@Cast("size_t") long i, @StdString String first);
+
+    @MemberSetter
+    @Index(function = "at")
+    public native StringStingPairVector second(@Cast("size_t") long i, @StdString String second);
+
+    public native @ByVal Iterator insert(@ByVal Iterator pos, @ByRef @Cast("std::pair<std::string,std::string>* ") StringStingPair value);
+
+    public native @ByVal Iterator erase(@ByVal Iterator pos);
+
+    public native @ByVal Iterator begin();
+
+    public native @ByVal Iterator end();
+
+    @NoOffset
+    @Name("iterator")
+    public static class Iterator extends Pointer {
+        public Iterator(Pointer p) {
+            super(p);
+        }
+
+        public Iterator() {
+        }
+
+        public native @Name("operator ++")
+        @ByRef Iterator increment();
+
+        public native @Name("operator ==") boolean equals(@ByRef Iterator it);
+
+        public native @Name("operator *")
+        @Const
+        @ByRef StringStingPair get();
+    }
+
+    private StringStingPairVector put(BytePointer[] firstValue, BytePointer[] secondValue) {
         for (int i = 0; i < firstValue.length && i < secondValue.length; i++) {
             first(i, firstValue[i]);
             second(i, secondValue[i]);
@@ -41,12 +101,18 @@ public class StringStingPairVector extends Pointer {
         return this;
     }
 
-    public StringStingPairVector put(String[] firstValue, String[] secondValue) {
+    private StringStingPairVector put(String[] firstValue, String[] secondValue) {
         for (int i = 0; i < firstValue.length && i < secondValue.length; i++) {
             first(i, firstValue[i]);
             second(i, secondValue[i]);
         }
         return this;
     }
+
+    @Name("pop_back")
+    public native void popBack();
+
+    @Name("push_back")
+    public native void pushBack(@ByRef StringStingPair value);
 }
 
