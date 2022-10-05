@@ -199,16 +199,22 @@ public class Aria2 extends io.github.ssaltedfish.aria2.prest.Aria2 {
  *
  * Execution mode for :func:{@code run()}
  */
-/** enum aria2::RUN_MODE */
-public static final int
+@Name("aria2::RUN_MODE") public enum RunMode {
   /**
    * :func:{@code run()} returns when no downloads are left.
    */
-  RUN_DEFAULT = 0,
+  RUN_DEFAULT(0),
   /**
    * :func:{@code run()} returns after one event polling.
    */
-  RUN_ONCE = 1;
+  RUN_ONCE(1);
+
+    public final int value;
+    private RunMode(int v) { this.value = v; }
+    private RunMode(RunMode e) { this.value = e.value; }
+    public RunMode intern() { for (RunMode e : values()) if (e.value == value) return e; return this; }
+    @Override public String toString() { return intern().name(); }
+}
 
 /**
  * \function
@@ -227,7 +233,7 @@ public static final int
  *
  * In either case, this function returns negative error code on error.
  */
-@Namespace("aria2") public static native int run(Session session, @Cast("aria2::RUN_MODE") int mode);
+@Namespace("aria2") public static native int run(Session session, RunMode mode);
 
 /**
  * \function
@@ -566,23 +572,29 @@ public static final int
  *
  * Constants how to re-position a download.
  */
-/** enum aria2::OffsetMode */
-public static final int
+@Namespace("aria2") public enum OffsetMode {
   /**
    * Moves the download to a position relative to the beginning of the
    * queue.
    */
-  OFFSET_MODE_SET = 0,
+  OFFSET_MODE_SET(0),
   /**
    * Moves the download to a position relative to the current
    * position.
    */
-  OFFSET_MODE_CUR = 1,
+  OFFSET_MODE_CUR(1),
   /**
    * Moves the download to a position relative to the end of the
    * queue.
    */
-  OFFSET_MODE_END = 2;
+  OFFSET_MODE_END(2);
+
+    public final int value;
+    private OffsetMode(int v) { this.value = v; }
+    private OffsetMode(OffsetMode e) { this.value = e.value; }
+    public OffsetMode intern() { for (OffsetMode e : values()) if (e.value == value) return e; return this; }
+    @Override public String toString() { return intern().name(); }
+}
 
 /**
  * \function
@@ -608,7 +620,7 @@ public static final int
  * This function returns the final destination position of this
  * download, or negative error code.
  */
-@Namespace("aria2") public static native int changePosition(Session session, @Cast("aria2::A2Gid") long gid, int pos, @Cast("aria2::OffsetMode") int how);
+@Namespace("aria2") public static native int changePosition(Session session, @Cast("aria2::A2Gid") long gid, int pos, OffsetMode how);
 
 /**
  * \function
@@ -627,16 +639,22 @@ public static final int
  *
  * The status of URI.
  */
-/** enum aria2::UriStatus */
-public static final int
+@Namespace("aria2") public enum UriStatus {
   /**
    * Indicating the URI has been used.
    */
-  URI_USED = 0,
+  URI_USED(0),
   /**
    * Indicating the URI has not been used.
    */
-  URI_WAITING = 1;
+  URI_WAITING(1);
+
+    public final int value;
+    private UriStatus(int v) { this.value = v; }
+    private UriStatus(UriStatus e) { this.value = e.value; }
+    public UriStatus intern() { for (UriStatus e : values()) if (e.value == value) return e; return this; }
+    @Override public String toString() { return intern().name(); }
+}
 // Targeting ..\cpp\UriData.java
 
 
@@ -649,21 +667,27 @@ public static final int
  *
  * BitTorrent file mode
  */
-/** enum aria2::BtFileMode */
-public static final int
+@Namespace("aria2") public enum BtFileMode {
   /**
    * Indicating no mode. This value is used when file mode is not
    * available.
    */
-  BT_FILE_MODE_NONE = 0,
+  BT_FILE_MODE_NONE(0),
   /**
    * Indicating single file torrent
    */
-  BT_FILE_MODE_SINGLE = 1,
+  BT_FILE_MODE_SINGLE(1),
   /**
    * Indicating multi file torrent
    */
-  BT_FILE_MODE_MULTI = 2;
+  BT_FILE_MODE_MULTI(2);
+
+    public final int value;
+    private BtFileMode(int v) { this.value = v; }
+    private BtFileMode(BtFileMode e) { this.value = e.value; }
+    public BtFileMode intern() { for (BtFileMode e : values()) if (e.value == value) return e; return this; }
+    @Override public String toString() { return intern().name(); }
+}
 // Targeting ..\cpp\BtMetaInfoData.java
 
 
@@ -673,32 +697,38 @@ public static final int
  *
  * The status of download item.
  */
-/** enum aria2::DownloadStatus */
-public static final int
+@Namespace("aria2") public enum DownloadStatus {
   /**
    * Indicating currently downloading/seeding.
    */
-  DOWNLOAD_ACTIVE = 0,
+  DOWNLOAD_ACTIVE(0),
   /**
    * Indicating in the queue; download is not started.
    */
-  DOWNLOAD_WAITING = 1,
+  DOWNLOAD_WAITING(1),
   /**
    * Indicating the download is paused.
    */
-  DOWNLOAD_PAUSED = 2,
+  DOWNLOAD_PAUSED(2),
   /**
    * Indicating stopped and completed download.
    */
-  DOWNLOAD_COMPLETE = 3,
+  DOWNLOAD_COMPLETE(3),
   /**
    * Indicating stopped download because of error.
    */
-  DOWNLOAD_ERROR = 4,
+  DOWNLOAD_ERROR(4),
   /**
    * Indicating removed by user's discretion.
    */
-  DOWNLOAD_REMOVED = 5;
+  DOWNLOAD_REMOVED(5);
+
+    public final int value;
+    private DownloadStatus(int v) { this.value = v; }
+    private DownloadStatus(DownloadStatus e) { this.value = e.value; }
+    public DownloadStatus intern() { for (DownloadStatus e : values()) if (e.value == value) return e; return this; }
+    @Override public String toString() { return intern().name(); }
+}
 // Targeting ..\cpp\DownloadHandle.java
 
 

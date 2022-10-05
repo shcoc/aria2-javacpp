@@ -41,5 +41,5 @@ public class UriData extends Pointer {
   /**
    * The status of URI
    */
-  public native @Cast("aria2::UriStatus") int status(); public native UriData status(int setter);
+  public native UriStatus status(); public native UriData status(UriStatus setter);
 }

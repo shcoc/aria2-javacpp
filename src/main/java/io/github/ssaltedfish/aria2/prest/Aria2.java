@@ -58,6 +58,13 @@ public class Aria2 implements InfoMapper {
                 .put(new Info("std::vector<UriData>").pointerTypes("UriDataVector").define())
                 .put(new Info("std::vector<std::vector<std::string> >").pointerTypes("StringVectorVector").define())
                 .put(new Info("aria2::DownloadEvent").enumerate(true).javaNames("DownloadEvent"))
+                .put(new Info("aria2::RUN_MODE").valueTypes("RunMode").enumerate(true).javaNames("RunMode").define())
+                .put(new Info("aria2::OffsetMode").enumerate(true).javaNames("OffsetMode"))
+                .put(new Info("aria2::UriStatus").enumerate(true).javaNames("UriStatus"))
+                .put(new Info("aria2::BtFileMode").enumerate(true).javaNames("BtFileMode"))
+                .put(new Info("aria2::DownloadStatus").enumerate(true).javaNames("DownloadStatus"))
+
+
 
         ;
 

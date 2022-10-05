@@ -23,9 +23,12 @@ public class StringVectorVector extends Pointer {
     private native void allocate(@Cast("size_t") long n);
     public native @Name("operator =") @ByRef StringVectorVector put(@ByRef StringVectorVector x);
 
-    public boolean empty() { return size() == 0; }
+    public native boolean empty();
+
     public native long size();
-    public void clear() { resize(0); }
+
+    public native void clear();
+
     public native void resize(@Cast("size_t") long n);
 
     @Index(function = "at") public native @ByRef StringVector get(@Cast("size_t") long i);
@@ -45,37 +48,33 @@ public class StringVectorVector extends Pointer {
     }
 
     public StringVector[] get() {
-        StringVector[] array = new StringVector[size() < Integer.MAX_VALUE ? (int)size() : Integer.MAX_VALUE];
+        StringVector[] array = new StringVector[size() < Integer.MAX_VALUE ? (int) size() : Integer.MAX_VALUE];
         for (int i = 0; i < array.length; i++) {
             array[i] = get(i);
         }
         return array;
     }
-    @Override public String toString() {
+
+    @Override
+    public String toString() {
         return java.util.Arrays.toString(get());
     }
 
-    public StringVector pop_back() {
-        long size = size();
-        StringVector value = get(size - 1);
-        resize(size - 1);
-        return value;
-    }
-    public StringVectorVector push_back(StringVector value) {
-        long size = size();
-        resize(size + 1);
-        return put(size, value);
-    }
-    public StringVectorVector put(StringVector value) {
-        if (size() != 1) { resize(1); }
-        return put(0, value);
-    }
-    public StringVectorVector put(StringVector ... array) {
-        if (size() != array.length) { resize(array.length); }
+
+    private StringVectorVector put(StringVector... array) {
+        if (size() != array.length) {
+            resize(array.length);
+        }
         for (int i = 0; i < array.length; i++) {
             put(i, array[i]);
         }
         return this;
     }
+
+    @Name("pop_back")
+    public native void popBack();
+
+    @Name("push_back")
+    public native void pushBack(@ByRef StringVector value);
 }
 

@@ -23,9 +23,9 @@ public class UriDataVector extends Pointer {
     private native void allocate(@Cast("size_t") long n);
     public native @Name("operator =") @ByRef UriDataVector put(@ByRef UriDataVector x);
 
-    public boolean empty() { return size() == 0; }
+    public native boolean empty();
     public native long size();
-    public void clear() { resize(0); }
+    public native void clear();
     public native void resize(@Cast("size_t") long n);
 
     @Index(function = "at") public native @ByRef UriData get(@Cast("size_t") long i);
@@ -55,27 +55,18 @@ public class UriDataVector extends Pointer {
         return java.util.Arrays.toString(get());
     }
 
-    public UriData pop_back() {
-        long size = size();
-        UriData value = get(size - 1);
-        resize(size - 1);
-        return value;
-    }
-    public UriDataVector push_back(UriData value) {
-        long size = size();
-        resize(size + 1);
-        return put(size, value);
-    }
-    public UriDataVector put(UriData value) {
-        if (size() != 1) { resize(1); }
-        return put(0, value);
-    }
-    public UriDataVector put(UriData ... array) {
+    private UriDataVector put(UriData ... array) {
         if (size() != array.length) { resize(array.length); }
         for (int i = 0; i < array.length; i++) {
             put(i, array[i]);
         }
         return this;
     }
+
+    @Name("pop_back")
+    public native void popBack();
+
+    @Name("push_back")
+    public native void pushBack(@ByRef UriData value);
 }
 

@@ -25,7 +25,7 @@ public class DownloadHandle extends Pointer {
   /**
    * Returns status of this download.
    */
-  public native @Cast("aria2::DownloadStatus") int getStatus();
+  public native DownloadStatus getStatus();
   /**
    * Returns the total length of this download in bytes.
    */

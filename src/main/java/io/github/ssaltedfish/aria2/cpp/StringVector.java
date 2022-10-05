@@ -25,9 +25,12 @@ public class StringVector extends Pointer {
     private native void allocate(@Cast("size_t") long n);
     public native @Name("operator =") @ByRef StringVector put(@ByRef StringVector x);
 
-    public boolean empty() { return size() == 0; }
+    public native boolean empty();
+
     public native long size();
-    public void clear() { resize(0); }
+
+    public native void clear();
+
     public native void resize(@Cast("size_t") long n);
 
     @Index(function = "at") public native @StdString BytePointer get(@Cast("size_t") long i);
@@ -58,40 +61,26 @@ public class StringVector extends Pointer {
         return java.util.Arrays.toString(get());
     }
 
-    public BytePointer pop_back() {
-        long size = size();
-        BytePointer value = get(size - 1);
-        resize(size - 1);
-        return value;
-    }
-    public StringVector push_back(BytePointer value) {
-        long size = size();
-        resize(size + 1);
-        return put(size, value);
-    }
-    public StringVector put(BytePointer value) {
-        if (size() != 1) { resize(1); }
-        return put(0, value);
-    }
-    public StringVector put(BytePointer ... array) {
-        if (size() != array.length) { resize(array.length); }
+    private StringVector put(BytePointer... array) {
+        if (size() != array.length) {
+            resize(array.length);
+        }
         for (int i = 0; i < array.length; i++) {
             put(i, array[i]);
         }
         return this;
     }
 
-    public StringVector push_back(String value) {
-        long size = size();
-        resize(size + 1);
-        return put(size, value);
-    }
-    public StringVector put(String value) {
-        if (size() != 1) { resize(1); }
-        return put(0, value);
-    }
-    public StringVector put(String ... array) {
-        if (size() != array.length) { resize(array.length); }
+    @Name("pop_back")
+    public native void popBack();
+
+    @Name("push_back")
+    public native void pushBack(@StdString String value);
+
+    private StringVector put(String... array) {
+        if (size() != array.length) {
+            resize(array.length);
+        }
         for (int i = 0; i < array.length; i++) {
             put(i, array[i]);
         }
